@@ -1,0 +1,4 @@
+<div class="card-project" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= project.image_url %>)">
+  <%= project.name %>
+  <%= link_to "+", project_path(project), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
+</div>

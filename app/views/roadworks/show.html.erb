@@ -1,0 +1,25 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= @roadwork.banner_url %>');">
+  <div class="container">
+    <h1><%= @roadwork.name %></h1>
+  </div>
+</div>
+
+<div class="pt-30 container">
+  <div class="cards">
+    <% @roadwork.projects.each do |project| %>
+      <%= render "roadworks/project_card", project: project %>
+    <% end %>
+  </div>
+  <div class="pt-30 row justify-content-center">
+    <div class="col-12 col-md-4">
+      <h4 class="text-center">Add a project</h4>
+      <%= simple_form_for [ @roadwork, @project ] do |f| %>
+        <%= f.input :name, placeholder: "Palm tree" %>
+        <%= f.input :image_url, placeholder: "https://some_nice_image_found_on_google.jpg" %>
+        <div class="form-actions">
+          <%= f.submit "Add", class: "btn btn-flat" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

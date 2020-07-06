@@ -1,0 +1,2000 @@
+  [1m[35m (4045.5ms)[0m  [1m[35mCREATE DATABASE "rails-garden-manager_development" ENCODING = 'unicode'[0m
+  [1m[35m (1051.9ms)[0m  [1m[35mCREATE DATABASE "rails-garden-manager_test" ENCODING = 'unicode'[0m
+  [1m[35m (196.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (83.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5952389427026727090)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGardens (20191125112553)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (97.8ms)[0m  [1m[35mCREATE TABLE "gardens" ("id" bigserial primary key, "name" character varying, "banner_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125112553"]]
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePlants (20191125113109)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (79.6ms)[0m  [1m[35mCREATE TABLE "plants" ("id" bigserial primary key, "garden_id" bigint, "name" character varying, "image_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_2c5194e718"
+FOREIGN KEY ("garden_id")
+  REFERENCES "gardens" ("id")
+)[0m
+  [1m[35m (42.2ms)[0m  [1m[35mCREATE  INDEX  "index_plants_on_garden_id" ON "plants"  ("garden_id")[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125113109"]]
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-09 00:59:08.183055"], ["updated_at", "2020-06-09 00:59:08.183055"]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5952389427026727090)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "French garden"], ["LIMIT", 1]]
+  [1m[36mGarden Create (0.6ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "French garden"], ["banner_url", "https://images.unsplash.com/photo-1589502482247-55fad359351d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1200"], ["created_at", "2020-06-09 00:59:11.246635"], ["updated_at", "2020-06-09 00:59:11.246635"]]
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Bob Sledd"], ["garden_id", 1], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 1], ["name", "Bob Sledd"], ["image_url", "https://images.unsplash.com/photo-1590568862895-477d34b6fef1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:13.597315"], ["updated_at", "2020-06-09 00:59:13.597315"]]
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Robin Banks"], ["garden_id", 1], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 1], ["name", "Robin Banks"], ["image_url", "https://images.unsplash.com/photo-1564661689194-52042ff13205?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:16.819075"], ["updated_at", "2020-06-09 00:59:16.819075"]]
+  [1m[35m (50.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Rusty Keyes"], ["garden_id", 1], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 1], ["name", "Rusty Keyes"], ["image_url", "https://images.unsplash.com/photo-1585922252135-6a5ed06adbe1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:21.016419"], ["updated_at", "2020-06-09 00:59:21.016419"]]
+  [1m[35m (32.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "My Cute Balcony"], ["LIMIT", 1]]
+  [1m[36mGarden Create (0.9ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "My Cute Balcony"], ["banner_url", "https://images.unsplash.com/photo-1589923188900-85dae523342b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1200"], ["created_at", "2020-06-09 00:59:24.796120"], ["updated_at", "2020-06-09 00:59:24.796120"]]
+  [1m[35m (180.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Aaron Thetires"], ["garden_id", 2], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 2], ["name", "Aaron Thetires"], ["image_url", "https://images.unsplash.com/photo-1495287924875-c158d2e8aafc?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:26.469120"], ["updated_at", "2020-06-09 00:59:26.469120"]]
+  [1m[35m (513.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Kim Payne Slogan"], ["garden_id", 2], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 2], ["name", "Kim Payne Slogan"], ["image_url", "https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:30.338955"], ["updated_at", "2020-06-09 00:59:30.338955"]]
+  [1m[35m (45.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Rhoda Booke"], ["garden_id", 2], ["LIMIT", 1]]
+  [1m[36mPlant Create (1.2ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 2], ["name", "Rhoda Booke"], ["image_url", "https://images.unsplash.com/photo-1560620863-7668add97c18?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:34.020623"], ["updated_at", "2020-06-09 00:59:34.020623"]]
+  [1m[35m (400.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "English garden"], ["LIMIT", 1]]
+  [1m[36mGarden Create (0.8ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "English garden"], ["banner_url", "https://images.unsplash.com/photo-1558166856-9b1e61301654?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1200"], ["created_at", "2020-06-09 00:59:40.044517"], ["updated_at", "2020-06-09 00:59:40.044517"]]
+  [1m[35m (28.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Nick O'Time"], ["garden_id", 3], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.8ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 3], ["name", "Nick O'Time"], ["image_url", "https://images.unsplash.com/photo-1586488722398-03e683db9158?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:41.904527"], ["updated_at", "2020-06-09 00:59:41.904527"]]
+  [1m[35m (24.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Rich Kidd"], ["garden_id", 3], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 3], ["name", "Rich Kidd"], ["image_url", "https://images.unsplash.com/photo-1549033147-07792c354a92?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:45.284042"], ["updated_at", "2020-06-09 00:59:45.284042"]]
+  [1m[35m (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Earl E. Byrd"], ["garden_id", 3], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 3], ["name", "Earl E. Byrd"], ["image_url", "https://images.unsplash.com/photo-1559855260-4ed9d56e1b10?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:49.164373"], ["updated_at", "2020-06-09 00:59:49.164373"]]
+  [1m[35m (20.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "Flowered patio"], ["LIMIT", 1]]
+  [1m[36mGarden Create (0.2ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Flowered patio"], ["banner_url", "https://images.unsplash.com/photo-1563714193017-5a5fb60bc02b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1200"], ["created_at", "2020-06-09 00:59:52.111263"], ["updated_at", "2020-06-09 00:59:52.111263"]]
+  [1m[35m (44.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Lon Moore"], ["garden_id", 4], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 4], ["name", "Lon Moore"], ["image_url", "https://images.unsplash.com/photo-1558854752-04412c582824?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:53.371163"], ["updated_at", "2020-06-09 00:59:53.371163"]]
+  [1m[35m (26.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Liv Long"], ["garden_id", 4], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 4], ["name", "Liv Long"], ["image_url", "https://images.unsplash.com/photo-1548912253-15c7b2844115?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 00:59:57.574090"], ["updated_at", "2020-06-09 00:59:57.574090"]]
+  [1m[35m (34.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Liv Good"], ["garden_id", 4], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 4], ["name", "Liv Good"], ["image_url", "https://images.unsplash.com/photo-1558207329-857e794001f4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 01:00:01.238958"], ["updated_at", "2020-06-09 01:00:01.238958"]]
+  [1m[35m (50.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "Garden in Japan"], ["LIMIT", 1]]
+  [1m[36mGarden Create (0.3ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Garden in Japan"], ["banner_url", "https://images.unsplash.com/photo-1568273190254-495487bbefab?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1200"], ["created_at", "2020-06-09 01:00:04.140786"], ["updated_at", "2020-06-09 01:00:04.140786"]]
+  [1m[35m (16.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Therese R. Green"], ["garden_id", 5], ["LIMIT", 1]]
+  [1m[36mPlant Create (1.3ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 5], ["name", "Therese R. Green"], ["image_url", "https://images.unsplash.com/photo-1591082027105-c457d3e3e270?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 01:00:06.794710"], ["updated_at", "2020-06-09 01:00:06.794710"]]
+  [1m[35m (36.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Don Key"], ["garden_id", 5], ["LIMIT", 1]]
+  [1m[36mPlant Create (1.4ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 5], ["name", "Don Key"], ["image_url", "https://images.unsplash.com/photo-1570460092550-23c778f13c5a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 01:00:12.325276"], ["updated_at", "2020-06-09 01:00:12.325276"]]
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Zoe Mudgett Hertz"], ["garden_id", 5], ["LIMIT", 1]]
+  [1m[36mPlant Create (1.3ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 5], ["name", "Zoe Mudgett Hertz"], ["image_url", "https://images.unsplash.com/photo-1526635750528-1fc147d5dfed?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 01:00:16.022268"], ["updated_at", "2020-06-09 01:00:16.022268"]]
+  [1m[35m (38.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "Walk among flowers"], ["LIMIT", 1]]
+  [1m[36mGarden Create (0.9ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Walk among flowers"], ["banner_url", "https://images.unsplash.com/photo-1559604359-59ff52c8e1ca?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1200"], ["created_at", "2020-06-09 01:00:20.403214"], ["updated_at", "2020-06-09 01:00:20.403214"]]
+  [1m[35m (29.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Rick Kleiner"], ["garden_id", 6], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 6], ["name", "Rick Kleiner"], ["image_url", "https://images.unsplash.com/photo-1566099612870-cf2bf758958d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 01:00:21.919196"], ["updated_at", "2020-06-09 01:00:21.919196"]]
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Helena Hanbaskett"], ["garden_id", 6], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.8ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 6], ["name", "Helena Hanbaskett"], ["image_url", "https://images.unsplash.com/photo-1557566217-4c93eed97ed6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 01:00:26.775172"], ["updated_at", "2020-06-09 01:00:26.775172"]]
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Quint S. Henschel"], ["garden_id", 6], ["LIMIT", 1]]
+  [1m[36mPlant Create (1.3ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 6], ["name", "Quint S. Henschel"], ["image_url", "https://images.unsplash.com/photo-1477092881686-6e1eec0878d5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=400"], ["created_at", "2020-06-09 01:00:31.383163"], ["updated_at", "2020-06-09 01:00:31.383163"]]
+  [1m[35m (48.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-06-09 03:01:58 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 233)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 1971.8ms | Allocations: 129654)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 433)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/zref/code/nlabrazi/rails-garden-manager/public/packs
+[Webpacker] Hash: 0f5bce8aa0dcadcb53e8
+Version: webpack 4.43.0
+Time: 1076ms
+Built at: 06/09/2020 3:02:02 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0dce064923c9a06380d2.js    507 KiB  application  [emitted] [immutable]  application
+js/application-0dce064923c9a06380d2.js.map    636 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0dce064923c9a06380d2.js js/application-0dce064923c9a06380d2.js.map
+[./app/javascript/packs/application.js] 19 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 4752ms (Views: 4742.2ms | ActiveRecord: 3.7ms | Allocations: 148000)
+
+
+Started GET "/gardens/2" for ::1 at 2020-06-09 03:02:10 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGarden Load (1.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 2]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 1.7ms | Allocations: 229)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.4ms | Allocations: 69)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 216.3ms | Allocations: 215386)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 346ms (Views: 227.0ms | ActiveRecord: 16.5ms | Allocations: 237732)
+
+
+Started GET "/" for ::1 at 2020-06-09 15:12:58 +0200
+  [1m[35m (28.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (59.7ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 228)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 1699.6ms | Allocations: 39132)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 433)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1991ms (Views: 1793.6ms | ActiveRecord: 90.1ms | Allocations: 55653)
+
+
+Started GET "/gardens/new" for ::1 at 2020-06-09 15:13:26 +0200
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 3321.2ms | Allocations: 207133)
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 464)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3390ms (Views: 3385.7ms | ActiveRecord: 0.0ms | Allocations: 219921)
+
+
+Started POST "/gardens" for ::1 at 2020-06-09 15:13:50 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2fH7XxpLKX2g3KE8Gk35cdJVeOl2LND32uok+ZJZJ59wecTXyDKnNesL4mtCUrkhuuwXp84Mg/IcU6pGqkSDSA==", "garden"=>{"name"=>"Korea", "banner_url"=>""}, "commit"=>"Create Garden"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "Korea"], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 5688)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 23.4ms | ActiveRecord: 1.2ms | Allocations: 22573)
+
+
+Started GET "/" for ::1 at 2020-06-09 15:14:36 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 3491)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 277)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.4ms | Allocations: 16126)
+
+
+Started GET "/gardens/new" for ::1 at 2020-06-09 15:15:12 +0200
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 6848)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 19484)
+
+
+Started POST "/gardens" for ::1 at 2020-06-09 15:15:19 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uUX4mnJcO2A8LwqVbJfdXRKdrvhjqF9hkGElSTVFAEUQzccSoCW1KHf4ScI0iJ0NeiTBttuIDGRW2Kv2DVikkg==", "garden"=>{"name"=>"", "banner_url"=>""}, "commit"=>"Create Garden"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 5804)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 22.1ms | ActiveRecord: 0.9ms | Allocations: 22400)
+
+
+Started POST "/gardens" for ::1 at 2020-06-09 15:16:49 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WTQCCvSJzt+ZVfXwJEGXA2aBQszFALGkjHex2qKw5JHwvD2CJvBAl9KCtqd8XtdTDjgtgn0g4qFKzj9lmq1ARg==", "garden"=>{"name"=>"Korean", "banner_url"=>"https://image.winudf.com/v2/image/Y29tLmZhc2hpb25zaG93c3R5bGUuS29yZWFHYXJkZW5TdHlsZV9zY3JlZW5fMV8xNTE4NTI2ODE3XzA2Nw/screen-1.jpg?fakeurl=1&type=.jpg"}, "commit"=>"Create Garden"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "Korean"], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Create (48.9ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Korean"], ["banner_url", "https://image.winudf.com/v2/image/Y29tLmZhc2hpb25zaG93c3R5bGUuS29yZWFHYXJkZW5TdHlsZV9zY3JlZW5fMV8xNTE4NTI2ODE3XzA2Nw/screen-1.jpg?fakeurl=1&type=.jpg"], ["created_at", "2020-06-09 13:16:49.417733"], ["updated_at", "2020-06-09 13:16:49.417733"]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[35m (14.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+Redirected to http://localhost:3000/gardens/7
+Completed 302 Found in 86ms (ActiveRecord: 63.5ms | Allocations: 4099)
+
+
+Started GET "/gardens/7" for ::1 at 2020-06-09 15:16:49 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGarden Load (0.7ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (21.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 7]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 114.6ms | Allocations: 7406)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 464)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 288ms (Views: 149.4ms | ActiveRecord: 28.8ms | Allocations: 30599)
+
+
+Started POST "/gardens/7/plants" for ::1 at 2020-06-09 15:17:21 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P+5nIxAX/g1YR6V4/R/LWkCC7FqQy2DP+dUa+sZ1IMOWZlirwm5wRROQ5i+lAIsKKDuDFCjrM8o/bJRF/miEFA==", "plant"=>{"name"=>"First One", "image_url"=>"https://image.winudf.com/v2/image/Y29tLmZhc2hpb25zaG93c3R5bGUuS29yZWFHYXJkZW5TdHlsZV9zY3JlZW5fMV8xNTE4NTI2ODE3XzA2Nw/screen-1.jpg?fakeurl=1&type="}, "commit"=>"Add", "garden_id"=>"7"}
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:3:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[36mPlant Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "First One"], ["garden_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[36mPlant Create (75.1ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 7], ["name", "First One"], ["image_url", "https://image.winudf.com/v2/image/Y29tLmZhc2hpb25zaG93c3R5bGUuS29yZWFHYXJkZW5TdHlsZV9zY3JlZW5fMV8xNTE4NTI2ODE3XzA2Nw/screen-1.jpg?fakeurl=1&type="], ["created_at", "2020-06-09 13:17:21.902865"], ["updated_at", "2020-06-09 13:17:21.902865"]]
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+Redirected to http://localhost:3000/gardens/7
+Completed 302 Found in 151ms (ActiveRecord: 93.0ms | Allocations: 5770)
+
+
+Started GET "/gardens/7" for ::1 at 2020-06-09 15:17:22 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGarden Load (0.9ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 7]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 2.2ms | Allocations: 227)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 42.1ms | Allocations: 6645)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 93.0ms | ActiveRecord: 2.0ms | Allocations: 19886)
+
+
+Started DELETE "/plants/19" for ::1 at 2020-06-09 15:17:28 +0200
+Processing by PlantsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gVAlQapObsJmhFJ2fKPzRUSDOEBWm6H16ajbH4bDQf0o2BrJeDfgii1TESEkvLMVLDpXDu678vAvEVWgvt7lKg==", "id"=>"19"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:14:in `destroy'
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:15:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:16:in `destroy'
+  [1m[36mPlant Destroy (0.3ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 19]]
+  ↳ app/controllers/plants_controller.rb:16:in `destroy'
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:16:in `destroy'
+Redirected to http://localhost:3000/gardens/7
+Completed 302 Found in 59ms (ActiveRecord: 42.6ms | Allocations: 3903)
+
+
+Started GET "/gardens/7" for ::1 at 2020-06-09 15:17:28 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGarden Load (0.6ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 7]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 12.8ms | Allocations: 6196)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 31.1ms | ActiveRecord: 1.1ms | Allocations: 19433)
+
+
+Started POST "/gardens/7/plants" for ::1 at 2020-06-09 15:17:43 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G9XK5jzj73GdVgGJEU1oAV21Iw+cNhQlJKh4WDLj5LeyXfVu7pphOdaBQt5JUihRNQxMQSQWRyDiEfbnCv5AYA==", "plant"=>{"name"=>"", "image_url"=>"http://image.winudf.com/v2/image/Y29tLmZhc2hpb25zaG93c3R5bGUuS29yZWFHYXJkZW5TdHlsZV9zY3JlZW5fMV8xNTE4NTI2ODE3XzA2Nw/screen-1.jpg?fakeurl"}, "commit"=>"Add", "garden_id"=>"7"}
+  [1m[36mGarden Load (1.6ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:3:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[36mPlant Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", ""], ["garden_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 7]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 6094)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 464)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 29.0ms | ActiveRecord: 4.4ms | Allocations: 23471)
+
+
+Started GET "/" for ::1 at 2020-06-09 15:19:09 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 3.7ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 3568)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 277)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.3ms | Allocations: 16195)
+
+
+Started GET "/gardens/7" for ::1 at 2020-06-09 15:19:13 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGarden Load (0.6ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (1.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 7]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 12.1ms | Allocations: 7305)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 27.2ms | ActiveRecord: 1.9ms | Allocations: 20541)
+
+
+Started GET "/" for ::1 at 2020-06-09 15:19:15 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.9ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 3558)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 277)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 38.2ms | ActiveRecord: 0.9ms | Allocations: 16180)
+
+
+Started GET "/gardens/new" for ::1 at 2020-06-09 15:19:19 +0200
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 5736)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 18364)
+
+
+Started POST "/gardens" for ::1 at 2020-06-09 15:19:34 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rHIja/LXKIIJo/0YZu62cqj+PnSZxcFAXkZL7viooNIF+hzjIK6mykJ0vk8+8fYiwEdROiHlkkWY/8VRwLUEBQ==", "garden"=>{"name"=>"TestRegex", "banner_url"=>"qsdqsdq"}, "commit"=>"Create Garden"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "TestRegex"], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Create (0.6ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "TestRegex"], ["banner_url", "qsdqsdq"], ["created_at", "2020-06-09 13:19:34.556232"], ["updated_at", "2020-06-09 13:19:34.556232"]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+Redirected to http://localhost:3000/gardens/8
+Completed 302 Found in 38ms (ActiveRecord: 26.9ms | Allocations: 3953)
+
+
+Started GET "/gardens/8" for ::1 at 2020-06-09 15:19:34 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 8]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 6187)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.5ms | Allocations: 19423)
+
+
+Started GET "/gardens/qsdqsdq" for ::1 at 2020-06-09 15:19:34 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"qsdqsdq"}
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 990)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Garden with 'id'=qsdqsdq):
+  
+app/controllers/gardens_controller.rb:7:in `show'
+Started GET "/" for ::1 at 2020-06-09 15:19:38 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (1.8ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 59)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 38.5ms | Allocations: 4087)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 70.6ms | Allocations: 7696)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 1.8ms | Allocations: 7986)
+
+
+  
+ActionView::Template::Error (The asset "qsdqsdq" is not present in the asset pipeline.):
+    1: <%= link_to garden_path(garden) do %>
+    2:   <div class="card-garden">
+    3:     <%= image_tag garden.banner_url %>
+    4:     <div class="card-garden-infos">
+    5:       <div>
+    6:         <h2><%= garden.name %></h2>
+  
+app/views/gardens/_garden_card.html.erb:3
+app/views/gardens/_garden_card.html.erb:1
+app/views/gardens/index.html.erb:43
+app/views/gardens/index.html.erb:42
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:19:53 +0200
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:19:55 +0200
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:19:56 +0200
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:19:58 +0200
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:20:00 +0200
+  [1m[36mGarden Load (1.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:20:07 +0200
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:20:09 +0200
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:20:10 +0200
+  [1m[36mGarden Load (0.9ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" ORDER BY "gardens"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/gardens/_garden_card.html.erb:3
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:25:19 +0200
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:25:20 +0200
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:25:22 +0200
+  [1m[36mGarden Load (1.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" ORDER BY "gardens"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/gardens/_garden_card.html.erb:3
+  [1m[36mCACHE Garden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" ORDER BY "gardens"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/gardens/_garden_card.html.erb:3
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:25:24 +0200
+  [1m[36mGarden Load (0.9ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" ORDER BY "gardens"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/gardens/_garden_card.html.erb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/views/gardens/_garden_card.html.erb:3
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 8]]
+  ↳ app/views/gardens/_garden_card.html.erb:3
+  [1m[36mGarden Destroy (1.2ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = $1[0m  [["id", 8]]
+  ↳ app/views/gardens/_garden_card.html.erb:3
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/views/gardens/_garden_card.html.erb:3
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:25:29 +0200
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:25:31 +0200
+Started PUT "/__web_console/repl_sessions/69af0a9485a2165f321605bd7a8f8897" for ::1 at 2020-06-09 15:25:33 +0200
+  [1m[36mGarden Load (0.8ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" ORDER BY "gardens"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/gardens/_garden_card.html.erb:3
+Started GET "/" for ::1 at 2020-06-09 15:25:37 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 4313)
+
+
+  
+NameError (uninitialized constant Garden::URL_REGEX):
+  
+app/models/garden.rb:7:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:26:14 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 7592)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 426)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 23.1ms | ActiveRecord: 3.4ms | Allocations: 23255)
+
+
+Started GET "/gardens/new" for ::1 at 2020-06-09 15:26:18 +0200
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 24.4ms | Allocations: 6142)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 464)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 0.0ms | Allocations: 18910)
+
+
+Started POST "/gardens" for ::1 at 2020-06-09 15:26:38 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wVCPy0Ii7fBdbqQGx2m0qtY4Dvh5IiOtXGpeKFr9WX9o2LBDkFtjuBa551GfdvT6voFhtsECcKia09CXYuD9qA==", "garden"=>{"name"=>"REGEX", "banner_url"=>"https://image.winudf.com/v2/image/Y29tLmZhc2hpb25zaG93c3R5bGUuS29yZWFHYXJkZW5TdHlsZV9zY3JlZW5fMV8xNTE4NTI2ODE3XzA2Nw/screen-1.jpg?fakeurl=1&type="}, "commit"=>"Create Garden"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "REGEX"], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Create (0.3ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "REGEX"], ["banner_url", "https://image.winudf.com/v2/image/Y29tLmZhc2hpb25zaG93c3R5bGUuS29yZWFHYXJkZW5TdHlsZV9zY3JlZW5fMV8xNTE4NTI2ODE3XzA2Nw/screen-1.jpg?fakeurl=1&type="], ["created_at", "2020-06-09 13:26:39.007898"], ["updated_at", "2020-06-09 13:26:39.007898"]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[35m (26.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+Redirected to http://localhost:3000/gardens/9
+Completed 302 Found in 35ms (ActiveRecord: 27.6ms | Allocations: 4151)
+
+
+Started GET "/gardens/9" for ::1 at 2020-06-09 15:26:39 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 9]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 6772)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 464)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 19.8ms | ActiveRecord: 2.3ms | Allocations: 25914)
+
+
+Started POST "/gardens/9/plants" for ::1 at 2020-06-09 15:26:56 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJR5is7QAOL59AWQ+kMwtDkvYYCMMeMC4Qfgth7g7JsVHEYCHKmOqrIjRseiXHDkUZYOzjQRsAcnvm4JJv1ITA==", "plant"=>{"name"=>"test again", "image_url"=>"https://image.winudf.com/v2/image/Y29tLmZhc2hpb25zaG93c3R5bGUuS29yZWFHYXJkZW5TdHlsZV9zY3JlZW5fMV8xNTE4NTI2ODE3XzA2Nw/screen-1.jpg?fakeurl=1&type"}, "commit"=>"Add", "garden_id"=>"9"}
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:3:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[36mPlant Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "test again"], ["garden_id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 9], ["name", "test again"], ["image_url", "https://image.winudf.com/v2/image/Y29tLmZhc2hpb25zaG93c3R5bGUuS29yZWFHYXJkZW5TdHlsZV9zY3JlZW5fMV8xNTE4NTI2ODE3XzA2Nw/screen-1.jpg?fakeurl=1&type"], ["created_at", "2020-06-09 13:26:56.479148"], ["updated_at", "2020-06-09 13:26:56.479148"]]
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[35m (34.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+Redirected to http://localhost:3000/gardens/9
+Completed 302 Found in 48ms (ActiveRecord: 35.9ms | Allocations: 5507)
+
+
+Started GET "/gardens/9" for ::1 at 2020-06-09 15:26:56 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mGarden Load (1.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (4.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 9]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 2.1ms | Allocations: 218)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 21.7ms | Allocations: 6634)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 39.6ms | ActiveRecord: 5.1ms | Allocations: 19871)
+
+
+Started DELETE "/plants/20" for ::1 at 2020-06-09 15:27:00 +0200
+Processing by PlantsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N21WtOmdDXiIVtXwfk4vBRLsshknd7YMIbnAZbulhxye5Wk8O+SDMMOBlqcmUW9VelXdV59X5QnnAE7ag7gjyw==", "id"=>"20"}
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:14:in `destroy'
+  [1m[36mGarden Load (0.8ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:15:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:16:in `destroy'
+  [1m[36mPlant Destroy (0.5ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/plants_controller.rb:16:in `destroy'
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:16:in `destroy'
+Redirected to http://localhost:3000/gardens/9
+Completed 302 Found in 36ms (ActiveRecord: 19.5ms | Allocations: 3892)
+
+
+Started GET "/gardens/9" for ::1 at 2020-06-09 15:27:00 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 9]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 6184)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.8ms | Allocations: 19421)
+
+
+Started GET "/" for ::1 at 2020-06-09 15:27:01 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.7ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 60)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 3696)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 277)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 0.7ms | Allocations: 16320)
+
+
+Started GET "/gardens/9" for ::1 at 2020-06-09 15:27:05 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mGarden Load (0.8ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (1.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 9]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 32.1ms | Allocations: 6184)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 70.7ms | ActiveRecord: 1.9ms | Allocations: 19420)
+
+
+Started GET "/" for ::1 at 2020-06-09 15:27:49 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2051)
+
+
+  
+ArgumentError (A regular expression or a proc or lambda must be supplied as :with):
+  
+app/models/garden.rb:9:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:27:54 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:27:56 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:27:58 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:27:59 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:28:02 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:28:09 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:28:09 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:28:12 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:28:20 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:28:21 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:28:22 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:28:24 +0200
+Started PUT "/__web_console/repl_sessions/a6967ead4f7a217c127ba8673e9a3753" for ::1 at 2020-06-09 15:28:24 +0200
+Started GET "/" for ::1 at 2020-06-09 15:29:38 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 4313)
+
+
+  
+NameError (uninitialized constant Garden::URL_REGEX):
+  
+app/models/garden.rb:7:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:29:51 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 4258)
+
+
+  
+NameError (uninitialized constant Garden::URL_REGEX):
+  
+app/models/garden.rb:6:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:29:57 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1992)
+
+
+  
+ArgumentError (A regular expression or a proc or lambda must be supplied as :with):
+  
+app/models/garden.rb:7:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:31:51 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 4259)
+
+
+  
+NameError (uninitialized constant Garden::URL_REGEX):
+  
+app/models/garden.rb:5:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:32:26 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 4254)
+
+
+  
+NameError (uninitialized constant Garden::URL_REGEX):
+  
+app/models/garden.rb:5:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:32:41 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 4046)
+
+
+  
+NameError (uninitialized constant Garden::URL_REGEX):
+  
+app/models/garden.rb:5:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:33:11 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 4259)
+
+
+  
+NameError (uninitialized constant Garden::URL_REGEX):
+  
+app/models/garden.rb:5:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:33:22 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1990)
+
+
+  
+ArgumentError (A regular expression or a proc or lambda must be supplied as :with):
+  
+app/models/garden.rb:7:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:33:37 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1464)
+
+
+  
+SyntaxError (/home/zref/code/nlabrazi/rails-garden-manager/app/models/garden.rb:7: syntax error, unexpected tCONSTANT, expecting =>
+...true, format: { :with URL_REGEX, message: "Bien essayé mais...
+...                      ^~~~~~~~~
+/home/zref/code/nlabrazi/rails-garden-manager/app/models/garden.rb:7: syntax error, unexpected '}', expecting end
+...mais ce n'est pas un IMAGE !" }
+...                              ^):
+  
+app/models/garden.rb:7: syntax error, unexpected tCONSTANT, expecting =>
+app/models/garden.rb:7: syntax error, unexpected '}', expecting end
+app/models/garden.rb:7: syntax error, unexpected tCONSTANT, expecting =>
+app/models/garden.rb:7: syntax error, unexpected '}', expecting end
+app/models/garden.rb:7: syntax error, unexpected tCONSTANT, expecting =>
+app/models/garden.rb:7: syntax error, unexpected '}', expecting end
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:36:56 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1989)
+
+
+  
+ArgumentError (A regular expression or a proc or lambda must be supplied as :with):
+  
+app/models/garden.rb:6:in `<class:Garden>'
+app/models/garden.rb:1:in `<main>'
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:39:00 +0200
+Processing by GardensController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1487)
+
+
+  
+SyntaxError (/home/zref/code/nlabrazi/rails-garden-manager/app/models/garden.rb:6: syntax error, unexpected ','
+...r_url, presence: true, format:, :with => {'(http?:\/\/.*\.(?...
+...                              ^
+/home/zref/code/nlabrazi/rails-garden-manager/app/models/garden.rb:6: syntax error, unexpected ',', expecting =>
+...{'(http?:\/\/.*\.(?:png|jpg))', message: "Bien essayé mais ...
+...                              ^
+/home/zref/code/nlabrazi/rails-garden-manager/app/models/garden.rb:6: syntax error, unexpected '}', expecting end
+...mais ce n'est pas un IMAGE !" }
+...                              ^):
+  
+app/models/garden.rb:6: syntax error, unexpected ','
+app/models/garden.rb:6: syntax error, unexpected ',', expecting =>
+app/models/garden.rb:6: syntax error, unexpected '}', expecting end
+app/models/garden.rb:6: syntax error, unexpected ','
+app/models/garden.rb:6: syntax error, unexpected ',', expecting =>
+app/models/garden.rb:6: syntax error, unexpected '}', expecting end
+app/models/garden.rb:6: syntax error, unexpected ','
+app/models/garden.rb:6: syntax error, unexpected ',', expecting =>
+app/models/garden.rb:6: syntax error, unexpected '}', expecting end
+app/controllers/gardens_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-06-09 15:39:28 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 220)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 7744)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 431)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 50.0ms | ActiveRecord: 4.4ms | Allocations: 23360)
+
+
+Started GET "/gardens/new" for ::1 at 2020-06-09 15:39:32 +0200
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 7258)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 464)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.0ms | Allocations: 20022)
+
+
+Started POST "/gardens" for ::1 at 2020-06-09 15:39:43 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9iNcikAkxq7ZZaH0075vL9SB8tEC71alUp11J+Hvf2Bfq2MCkl1I5pKy4qOLoS9/vDidn7rPBaCUJPuY2fLbtw==", "garden"=>{"name"=>"regeeeeex", "banner_url"=>"retarding"}, "commit"=>"Create Garden"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "regeeeeex"], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 5638)
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 30.1ms | ActiveRecord: 1.8ms | Allocations: 21951)
+
+
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  [1m[36mGarden Load (1.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" ORDER BY "gardens"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGarden Load (1.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" ORDER BY "gardens"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGarden Load (1.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" ORDER BY "gardens"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 9]]
+  [1m[36mGarden Destroy (0.9ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = $1[0m  [["id", 9]]
+  [1m[35m (48.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGarden Load (1.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  [1m[36mGarden Load (1.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" ORDER BY "gardens"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGarden Load (0.9ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" ORDER BY "gardens"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 7]]
+  [1m[36mGarden Destroy (1.5ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = $1[0m  [["id", 7]]
+  [1m[35m (19.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-06-09 15:43:07 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 228)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 59.6ms | Allocations: 39076)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 433)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 71.9ms | ActiveRecord: 5.0ms | Allocations: 55790)
+
+
+Started GET "/gardens/new" for ::1 at 2020-06-09 15:43:12 +0200
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 193.6ms | Allocations: 204160)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 464)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 209ms (Views: 205.6ms | ActiveRecord: 0.0ms | Allocations: 216948)
+
+
+Started POST "/gardens" for ::1 at 2020-06-09 15:43:21 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TaB7EAu9V6NcVN0Aiw60uK6vFN9uxVLP+ZA9Jzj7TsLkKESY2cTZ6xeDnlfTEfToxhZ7kdblAco/KbOYAObqFQ==", "garden"=>{"name"=>"RegexDeFeur", "banner_url"=>"qsdqsd"}, "commit"=>"Create Garden"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "RegexDeFeur"], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 5687)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 25.0ms | ActiveRecord: 1.3ms | Allocations: 22457)
+
+
+Started POST "/gardens" for ::1 at 2020-06-09 15:44:37 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MhwoSPomzlLGsQ33p+yNzo77lSMjp7yDnHtY6HYXX8OblBfAKF9AGo1mTqD/882e5kL6bZuH74ZawtZXTgr7FA==", "garden"=>{"name"=>"RegexDeFeur", "banner_url"=>"https://image.winudf.com/v2/image/Y29tLmZhc2hpb25zaG93c3R5bGUuS29yZWFHYXJkZW5TdHlsZV9zY3JlZW5fMV8xNTE4NTI2ODE3XzA2Nw/screen-1.jpg?fakeurl=1&type=.jpg"}, "commit"=>"Create Garden"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "RegexDeFeur"], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 6741)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 26.8ms | ActiveRecord: 0.9ms | Allocations: 22924)
+
+
+Started GET "/" for ::1 at 2020-06-09 15:46:24 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 63)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 6773)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 278)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 22.4ms | ActiveRecord: 3.2ms | Allocations: 21004)
+
+
+Started GET "/gardens/new" for ::1 at 2020-06-09 15:46:26 +0200
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 34.9ms | Allocations: 5898)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 82.6ms | ActiveRecord: 0.0ms | Allocations: 18526)
+
+
+Started POST "/gardens" for ::1 at 2020-06-09 15:46:36 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f+f9gNucY83POhh7APoyT18DCupPfHCx8z7Cx5LSko/Wb8IICeXthYTtWyxY5XIfN7plpPdcI7Q1h0x4qs82WA==", "garden"=>{"name"=>"RegexDesEnfers", "banner_url"=>"etsts"}, "commit"=>"Create Garden"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "RegexDesEnfers"], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 5636)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 48.9ms | ActiveRecord: 2.8ms | Allocations: 21938)
+
+
+Started POST "/gardens" for ::1 at 2020-06-09 15:46:45 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dWeJVxgeGB+0BQgtGbcT/cGuB2MSKM+tTXFM0tkYZ1bc77bfymeWV//SS3pBqFOtqRdoLaoInKiLyMJt4QXDgQ==", "garden"=>{"name"=>"RegexDesEnfers", "banner_url"=>"http:///test.jpg"}, "commit"=>"Create Garden"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "RegexDesEnfers"], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Create (0.6ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "RegexDesEnfers"], ["banner_url", "http:///test.jpg"], ["created_at", "2020-06-09 13:46:45.215284"], ["updated_at", "2020-06-09 13:46:45.215284"]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+Redirected to http://localhost:3000/gardens/10
+Completed 302 Found in 35ms (ActiveRecord: 26.2ms | Allocations: 4100)
+
+
+Started GET "/gardens/10" for ::1 at 2020-06-09 15:46:45 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 10]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 7412)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 464)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 22.3ms | ActiveRecord: 3.4ms | Allocations: 28125)
+
+
+Started POST "/gardens/10/plants" for ::1 at 2020-06-09 15:46:52 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lD6MAIkk7ZhP2he9Ekvl/UWYMyQW9PY9RcmdMyV1Als9trOIW11j0AQNVOpKVKWtLSFcaq7UpTiDcBOMHWimjA==", "plant"=>{"name"=>"", "image_url"=>"qsdqd"}, "commit"=>"Add", "garden_id"=>"10"}
+  [1m[36mGarden Load (3.8ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:3:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[36mPlant Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", ""], ["garden_id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 10]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 6299)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 464)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 20.4ms | ActiveRecord: 5.0ms | Allocations: 25017)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-10 01:30:09 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 228)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 48.1ms | Allocations: 39254)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 433)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 61.8ms | ActiveRecord: 3.0ms | Allocations: 55880)
+
+
+Started GET "/?hjVerifyInstall=1847420" for 127.0.0.1 at 2020-06-10 01:34:57 +0200
+Processing by GardensController#index as HTML
+  Parameters: {"hjVerifyInstall"=>"1847420"}
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.6ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3626)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 278)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.6ms | Allocations: 16253)
+
+
+Started GET "/?hjVerifyInstall=1847420" for 127.0.0.1 at 2020-06-10 01:35:03 +0200
+Processing by GardensController#index as HTML
+  Parameters: {"hjVerifyInstall"=>"1847420"}
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 3559)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 277)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.5ms | Allocations: 16176)
+
+
+Started GET "/" for ::1 at 2020-07-02 04:25:49 +0200
+  [1m[35m (29.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (60.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 6.3ms | Allocations: 228)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 1.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 1790.3ms | Allocations: 39415)
+  Rendered shared/_navbar.html.erb (Duration: 23.1ms | Allocations: 433)
+  Rendered shared/_footer.html.erb (Duration: 1.6ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2272ms (Views: 2015.4ms | ActiveRecord: 103.6ms | Allocations: 57318)
+
+
+Started GET "/gardens/10" for ::1 at 2020-07-02 04:26:03 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (9.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 10]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 10134.4ms | Allocations: 875815)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 464)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10336ms (Views: 10160.2ms | ActiveRecord: 14.9ms | Allocations: 901479)
+
+
+Started GET "/" for ::1 at 2020-07-02 04:26:18 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 56)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 3562)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 277)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.4ms | Allocations: 16208)
+
+
+Started GET "/gardens/1" for ::1 at 2020-07-02 04:26:20 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGarden Load (1.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (49.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 1]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 22.6ms | Allocations: 234)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.5ms | Allocations: 69)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.5ms | Allocations: 69)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 200.7ms | Allocations: 10160)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 463)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 265ms (Views: 206.6ms | ActiveRecord: 51.3ms | Allocations: 23396)
+
+
+Started GET "/" for ::1 at 2020-07-02 04:26:24 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (1.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.9ms | Allocations: 60)
+  Rendered gardens/_garden_card.html.erb (Duration: 1.0ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.8ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.7ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 2.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 1.5ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.9ms | Allocations: 56)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 40.1ms | Allocations: 3561)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 277)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 107.0ms | ActiveRecord: 1.4ms | Allocations: 16200)
+
+
+Started GET "/gardens/2" for ::1 at 2020-07-02 04:26:26 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGarden Load (1.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (1.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 2]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.7ms | Allocations: 80)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.5ms | Allocations: 69)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.7ms | Allocations: 69)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 33.7ms | Allocations: 6664)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 462)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 59.7ms | ActiveRecord: 2.6ms | Allocations: 19909)
+
+
+Started GET "/" for ::1 at 2020-07-02 04:26:29 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (1.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 1.2ms | Allocations: 59)
+  Rendered gardens/_garden_card.html.erb (Duration: 2.0ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 1.2ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 1.0ms | Allocations: 56)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 42.7ms | Allocations: 3556)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 277)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 96.7ms | ActiveRecord: 1.1ms | Allocations: 16185)
+
+
+Started GET "/gardens/3" for ::1 at 2020-07-02 04:26:32 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGarden Load (1.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (2.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 3]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 1.7ms | Allocations: 80)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.8ms | Allocations: 69)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.7ms | Allocations: 69)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 43.7ms | Allocations: 6662)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 462)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 70.4ms | ActiveRecord: 3.9ms | Allocations: 19897)
+
+
+Started GET "/" for ::1 at 2020-07-02 04:26:34 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (1.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 1.1ms | Allocations: 59)
+  Rendered gardens/_garden_card.html.erb (Duration: 1.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 2.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.9ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.9ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 2.1ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 1.3ms | Allocations: 56)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 44.1ms | Allocations: 3556)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 277)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 106.8ms | ActiveRecord: 1.2ms | Allocations: 16188)
+
+
+Started GET "/gardens/4" for ::1 at 2020-07-02 04:26:36 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mGarden Load (0.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 4]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.5ms | Allocations: 80)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 10.9ms | Allocations: 6660)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 462)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 0.9ms | Allocations: 19895)
+
+
+Started GET "/" for ::1 at 2020-07-02 04:26:39 +0200
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (1.6ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.7ms | Allocations: 59)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.7ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 1.9ms | Allocations: 56)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 50.2ms | Allocations: 3557)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 277)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 117ms (Views: 113.1ms | ActiveRecord: 1.6ms | Allocations: 16187)
+
+
+Started GET "/" for ::1 at 2020-07-05 22:48:04 +0200
+  [1m[35m (30.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (55.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 1.8ms | Allocations: 228)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 56)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 234.1ms | Allocations: 39240)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 433)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 298ms (Views: 189.7ms | ActiveRecord: 86.7ms | Allocations: 55909)
+
+
+Started GET "/" for ::1 at 2020-07-05 22:50:48 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant RoadworksController):
+  
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (5.1.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-05 22:52:04 +0200
+  
+ActionController::RoutingError (uninitialized constant RoadworksController):
+  
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (5.1.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-05 22:52:37 +0200
+  
+ActionController::RoutingError (uninitialized constant RoadworksController):
+  
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (5.1.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-05 22:52:52 +0200
+  
+ActionController::RoutingError (uninitialized constant RoadworksController):
+  
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (5.1.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-05 22:57:21 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant RoadworksController):
+  
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (5.1.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-05 22:59:09 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant RoadworksController):
+  
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (5.1.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails-roadwork-manager_development"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails-roadwork-manager_test"[0m
+  [1m[35m (1156.8ms)[0m  [1m[35mCREATE DATABASE "rails-roadwork-manager_development" ENCODING = 'unicode'[0m
+  [1m[35m (756.7ms)[0m  [1m[35mCREATE DATABASE "rails-roadwork-manager_test" ENCODING = 'unicode'[0m
+  [1m[35m (123.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (138.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3102347193055813290)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRoadworks (20191125112553)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (71.8ms)[0m  [1m[35mCREATE TABLE "roadworks" ("id" bigserial primary key, "name" character varying, "banner_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125112553"]]
+  [1m[35m (16.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProjects (20191125113109)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (83.1ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "roadwork_id" bigint, "name" character varying, "image_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b03e6bfc42"
+FOREIGN KEY ("roadwork_id")
+  REFERENCES "roadworks" ("id")
+)[0m
+  [1m[35m (35.4ms)[0m  [1m[35mCREATE  INDEX  "index_projects_on_roadwork_id" ON "projects"  ("roadwork_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125113109"]]
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-05 20:59:50.744680"], ["updated_at", "2020-07-05 20:59:50.744680"]]
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3102347193055813290)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-07-05 23:00:20 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant RoadworksController):
+  
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (5.1.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-05 23:00:20 +0200
+  
+ActionController::RoutingError (uninitialized constant RoadworksController):
+  
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (5.1.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-05 23:01:18 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 143.6ms | Allocations: 48967)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.0ms | Allocations: 51973)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: roadwork_card.
+        on line 8:1 of app/assets/stylesheets/components/_index.scss
+        from line 12:1 of app/assets/stylesheets/application.scss
+>> @import "roadwork_card";
+
+   ^
+):
+  
+app/assets/stylesheets/components/_index.scss:8
+Started GET "/" for ::1 at 2020-07-05 23:02:09 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 51.4ms | Allocations: 27595)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms | Allocations: 27893)
+
+
+  
+ActionView::Template::Error (The asset "roadwork.svg" is not present in the asset pipeline.):
+    13:       <div class="col-xs-12 col-md-6 col-lg-4">
+    14:         <%= link_to new_roadwork_path do %>
+    15:           <div class="icon">
+    16:             <%= image_tag "roadwork.svg" %>
+    17:           </div>
+    18:         <% end %>
+    19:         <p class="text-center fs-24">Create your roadwork</p>
+  
+app/views/roadworks/index.html.erb:16
+app/views/roadworks/index.html.erb:14
+Started GET "/" for ::1 at 2020-07-05 23:04:38 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 4146.6ms | Allocations: 117298)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 436)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/zref/code/nlabrazi/batimentettravaux/public/packs
+[Webpacker] Hash: 0f5bce8aa0dcadcb53e8
+Version: webpack 4.43.0
+Time: 1180ms
+Built at: 07/05/2020 11:04:46 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0dce064923c9a06380d2.js    507 KiB  application  [emitted] [immutable]  application
+js/application-0dce064923c9a06380d2.js.map    636 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0dce064923c9a06380d2.js js/application-0dce064923c9a06380d2.js.map
+[./app/javascript/packs/application.js] 19 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 8676ms (Views: 8672.4ms | ActiveRecord: 1.7ms | Allocations: 132465)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-05 23:04:53 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 243.3ms | Allocations: 207188)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 466)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 309ms (Views: 257.6ms | ActiveRecord: 16.7ms | Allocations: 223601)
+
+
+Started GET "/" for ::1 at 2020-07-05 23:05:53 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (4.0ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 41.2ms | Allocations: 2953)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 280)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 96.7ms | ActiveRecord: 4.0ms | Allocations: 16058)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-05 23:05:54 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 6849)
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 465)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.0ms | Allocations: 19914)
+
+
+Started GET "/" for ::1 at 2020-07-05 23:05:57 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (2.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 2674)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 280)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 88.8ms | ActiveRecord: 2.4ms | Allocations: 15740)
+
+
+Started GET "/" for ::1 at 2020-07-05 23:12:27 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (1.0ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 3488)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 280)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 1.0ms | Allocations: 16597)
+
+
