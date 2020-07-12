@@ -1,14 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(<%= image_path('home_banner.jpg') %>)">
   <div class="container">
-    <h1>My roadwork Manager</h1>
-    <p>Manage, Cultivate and Grow your roadwork and your Experience</p>
-    <%= link_to "Discover", "#how", class: "btn btn-flat" %>
+    <h1>Mon gestionnaire de travaux</h1>
+    <p>Postez, Gérez et Optimisez vos recherche d'artisants pour travaux</p>
+    <%= link_to "Découvrir", "#how", class: "btn btn-flat" %>
   </div>
 </div>
 
 <div class="container">
   <div class="section">
-    <h2 id="how" class="text-center">How does it work?</h2>
+    <h2 id="how" class="text-center">Comment cela fonctionne?</h2>
     <div class="row">
       <div class="col-xs-12 col-md-6 col-lg-4">
         <%= link_to new_roadwork_path do %>
@@ -16,7 +16,7 @@
             <%= image_tag "roadwork.svg" %>
           </div>
         <% end %>
-        <p class="text-center fs-24">Create your roadwork</p>
+        <p class="text-center fs-24">Créez votre projet de travaux</p>
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
         <%= link_to new_roadwork_path do %>
@@ -24,7 +24,7 @@
             <%= image_tag "circles.svg" %>
           </div>
         <% end %>
-        <p class="text-center fs-24">Add your projects</p>
+        <p class="text-center fs-24">Ajoutez les détails et précisions</p>
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
         <%= link_to new_roadwork_path do %>
@@ -32,12 +32,12 @@
             <%= image_tag "watering.svg" %>
           </div>
         <% end %>
-        <p class="text-center fs-24">Manage your daily activity</p>
+        <p class="text-center fs-24">Gérez vos demandes et le suivis</p>
       </div>
     </div>
   </div>
   <div class="section">
-    <h2 class="text-center">Our Community Best roadworks</h2>
+    <h2 class="text-center">La Meilleure Communauté pour travaux</h2>
     <div class="cards">
       <% @roadworks.each do |roadwork| %>
         <%= render "roadwork_card", roadwork: roadwork %>
@@ -46,7 +46,7 @@
   </div>
   <div class="section">
     <div class="text-center">
-      <%= link_to "Create my roadwork", new_roadwork_path, class: "btn btn-flat" %>
+      <%= link_to "Créer mon projet", new_roadwork_path, class: "btn btn-flat" %>
     </div>
   </div>
 </div>
