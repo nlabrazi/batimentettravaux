@@ -1998,3 +1998,42 @@ Processing by RoadworksController#index as HTML
 Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 1.0ms | Allocations: 16597)
 
 
+Started GET "/" for ::1 at 2020-07-12 19:42:48 +0200
+  [1m[35m (28.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (59.5ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 487.7ms | Allocations: 55612)
+Completed 500 Internal Server Error in 658ms (ActiveRecord: 128.3ms | Allocations: 59117)
+
+
+  
+ActionView::Template::Error (Missing partial roadworks/_roadwork_card, application/_roadwork_card with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/zref/code/nlabrazi/batimentettravaux/app/views"
+  * "/home/zref/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.1/app/views"
+  * "/home/zref/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actionmailbox-6.0.3.1/app/views"
+):
+    40:     <h2 class="text-center">Our Community Best roadworks</h2>
+    41:     <div class="cards">
+    42:       <% @roadworks.each do |roadwork| %>
+    43:         <%= render "roadwork_card", roadwork: roadwork %>
+    44:       <% end %>
+    45:     </div>
+    46:   </div>
+  
+app/views/roadworks/index.html.erb:43
+app/views/roadworks/index.html.erb:42
+Started GET "/" for ::1 at 2020-07-12 19:44:50 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.9ms | Allocations: 228)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3491)
+  Rendered shared/_navbar.html.erb (Duration: 24.6ms | Allocations: 435)
+  Rendered shared/_footer.html.erb (Duration: 13.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 141ms (Views: 138.9ms | ActiveRecord: 0.3ms | Allocations: 18035)
+
+
