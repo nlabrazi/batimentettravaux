@@ -1,4 +1,4 @@
-class projectsController < ApplicationController
+class ProjectsController < ApplicationController
   def create
     @roadwork = Roadwork.find(params[:roadwork_id])
     @project = Project.new(project_params)

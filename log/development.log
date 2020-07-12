@@ -3097,3 +3097,72 @@ Processing by RoadworksController#index as HTML
 Completed 200 OK in 145ms (Views: 137.4ms | ActiveRecord: 4.8ms | Allocations: 58150)
 
 
+Started GET "/" for ::1 at 2020-07-12 20:18:41 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 1.0ms | Allocations: 233)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 4534.6ms | Allocations: 129713)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 435)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/zref/code/nlabrazi/batimentettravaux/public/packs
+[Webpacker] Hash: 0f5bce8aa0dcadcb53e8
+Version: webpack 4.43.0
+Time: 10663ms
+Built at: 07/12/2020 8:19:07 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0dce064923c9a06380d2.js    507 KiB  application  [emitted] [immutable]  application
+js/application-0dce064923c9a06380d2.js.map    636 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0dce064923c9a06380d2.js js/application-0dce064923c9a06380d2.js.map
+[./app/javascript/packs/application.js] 19 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 26064ms (Views: 25999.2ms | ActiveRecord: 3.0ms | Allocations: 151862)
+
+
+Started GET "/" for ::1 at 2020-07-12 20:19:39 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.9ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 2767)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 280)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.9ms | Allocations: 15385)
+
+
+Started GET "/roadworks/1" for ::1 at 2020-07-12 20:19:45 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (10.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 1]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 2488.3ms | Allocations: 875409)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 466)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2613ms (Views: 2502.7ms | ActiveRecord: 14.6ms | Allocations: 903946)
+
+
+Started GET "/" for ::1 at 2020-07-12 20:19:52 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.8ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.8ms | Allocations: 60)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 2762)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 279)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.8ms | Allocations: 15381)
+
+
