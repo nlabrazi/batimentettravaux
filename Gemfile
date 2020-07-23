@@ -19,6 +19,9 @@ gem 'webpacker'
 gem "nokogiri", ">= 1.10.8"
 gem "rack", ">= 2.0.8"
 
+# custom added
+gem 'cloudinary'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

@@ -3166,3 +3166,2281 @@ Processing by RoadworksController#index as HTML
 Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.8ms | Allocations: 15381)
 
 
+Started GET "/" for ::1 at 2020-07-23 02:58:36 +0200
+  [1m[35m (27.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (58.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 8.2ms | Allocations: 228)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 960.7ms | Allocations: 38679)
+  Rendered shared/_navbar.html.erb (Duration: 14.8ms | Allocations: 435)
+  Rendered shared/_footer.html.erb (Duration: 15.7ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1267ms (Views: 1057.0ms | ActiveRecord: 134.7ms | Allocations: 55260)
+
+
+Started GET "/" for ::1 at 2020-07-23 03:01:14 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.6ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.9ms | Allocations: 217)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 3535)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 428)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.6ms | Allocations: 17698)
+
+
+Started GET "/" for ::1 at 2020-07-23 03:03:04 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (2.1ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 3.4ms | Allocations: 217)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 35.0ms | Allocations: 3468)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 428)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 111ms (Views: 105.4ms | ActiveRecord: 2.1ms | Allocations: 17616)
+
+
+Started GET "/" for ::1 at 2020-07-23 03:04:17 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2756)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 280)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4714ms (Views: 4712.1ms | ActiveRecord: 0.4ms | Allocations: 88882)
+
+
+Started GET "/" for ::1 at 2020-07-23 03:04:31 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2750)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 279)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1536ms (Views: 1534.6ms | ActiveRecord: 0.4ms | Allocations: 90668)
+
+
+Started GET "/" for ::1 at 2020-07-23 03:06:19 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (1.1ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.5ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 2750)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 279)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 1.1ms | Allocations: 16158)
+
+
+Started GET "/" for ::1 at 2020-07-23 03:06:45 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (1.1ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 1.0ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 28.9ms | Allocations: 2753)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 279)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1659ms (Views: 1655.3ms | ActiveRecord: 1.1ms | Allocations: 94493)
+
+
+Started GET "/" for ::1 at 2020-07-23 03:08:00 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2753)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 279)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1504ms (Views: 1502.3ms | ActiveRecord: 0.4ms | Allocations: 94490)
+
+
+Started GET "/" for ::1 at 2020-07-23 03:08:23 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2750)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 279)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1610ms (Views: 1608.8ms | ActiveRecord: 0.4ms | Allocations: 94883)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 03:09:07 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 2965.6ms | Allocations: 206737)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 466)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3001ms (Views: 2998.4ms | ActiveRecord: 0.0ms | Allocations: 220263)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3102347193055813290)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20200723012724)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (413.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (31.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  [1m[35m (198.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (32.8ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  [1m[35m (31.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200723012724"]]
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (22.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3102347193055813290)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/roadworks/new" for ::1 at 2020-07-23 03:42:59 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 118.3ms | Allocations: 206529)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 647)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4364ms (Views: 4352.8ms | ActiveRecord: 2.6ms | Allocations: 381308)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 03:43:18 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 8039)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 633)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms | Allocations: 23436)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 03:43:49 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JuGqYvE59aV27qGagfiyDBRJM0vdobCne+ERQtUW4lOVFptc2yYuQayNNiWTtf4yaFgEEkRkF/k1SiRvTd0HzQ==", "roadwork"=>{"name"=>"Test Upload", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75dc97478 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1n1clif.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[photo]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">, "banner_url"=>""}, "commit"=>"Poster votre projet"}
+[31mUnpermitted parameter: :photo[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 25.6ms | Allocations: 9012)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 66.1ms | ActiveRecord: 3.7ms | Allocations: 27408)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 03:48:03 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JuGqYvE59aV27qGagfiyDBRJM0vdobCne+ERQtUW4lOVFptc2yYuQayNNiWTtf4yaFgEEkRkF/k1SiRvTd0HzQ==", "roadwork"=>{"name"=>"Test Upload", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00007fb76c00be48 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-11rob0r.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[photo]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">, "banner_url"=>""}, "commit"=>"Poster votre projet"}
+[31mUnpermitted parameter: :photo[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 17.6ms | Allocations: 9192)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 39.2ms | ActiveRecord: 1.8ms | Allocations: 28417)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:02:09 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JuGqYvE59aV27qGagfiyDBRJM0vdobCne+ERQtUW4lOVFptc2yYuQayNNiWTtf4yaFgEEkRkF/k1SiRvTd0HzQ==", "roadwork"=>{"name"=>"Test Upload", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75eacd4c0 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-bcoiah.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[photo]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">, "banner_url"=>""}, "commit"=>"Poster votre projet"}
+[31mUnpermitted parameter: :photo[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 16.8ms | Allocations: 9249)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 83.9ms | ActiveRecord: 1.3ms | Allocations: 38365)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:02:49 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JuGqYvE59aV27qGagfiyDBRJM0vdobCne+ERQtUW4lOVFptc2yYuQayNNiWTtf4yaFgEEkRkF/k1SiRvTd0HzQ==", "roadwork"=>{"name"=>"Test Upload", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00007fb758474d18 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-fdgx7v.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[photo]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">, "banner_url"=>""}, "commit"=>"Poster votre projet"}
+[31mUnpermitted parameter: :photo[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 26.7ms | Allocations: 9245)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 45.5ms | ActiveRecord: 1.8ms | Allocations: 28624)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:02:57 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JuGqYvE59aV27qGagfiyDBRJM0vdobCne+ERQtUW4lOVFptc2yYuQayNNiWTtf4yaFgEEkRkF/k1SiRvTd0HzQ==", "roadwork"=>{"name"=>"Test Upload", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75db4c550 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-11jjj3.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[photo]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">, "banner_url"=>""}, "commit"=>"Poster votre projet"}
+[31mUnpermitted parameter: :photo[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 8177)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 35.5ms | ActiveRecord: 1.5ms | Allocations: 27543)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:03:08 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JuGqYvE59aV27qGagfiyDBRJM0vdobCne+ERQtUW4lOVFptc2yYuQayNNiWTtf4yaFgEEkRkF/k1SiRvTd0HzQ==", "roadwork"=>{"name"=>"Test Upload", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75ddc3428 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-m60b7r.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[photo]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">, "banner_url"=>""}, "commit"=>"Poster votre projet"}
+[31mUnpermitted parameter: :photo[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 7844)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 30.5ms | ActiveRecord: 2.6ms | Allocations: 25683)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:03:19 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JuGqYvE59aV27qGagfiyDBRJM0vdobCne+ERQtUW4lOVFptc2yYuQayNNiWTtf4yaFgEEkRkF/k1SiRvTd0HzQ==", "roadwork"=>{"name"=>"Test Upload", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75eace578 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-uwhtfz.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[photo]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">, "banner_url"=>""}, "commit"=>"Poster votre projet"}
+[31mUnpermitted parameter: :photo[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 7835)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 39.6ms | ActiveRecord: 1.8ms | Allocations: 25660)
+
+
+Started GET "/" for ::1 at 2020-07-23 04:03:21 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (2.9ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 2.9ms | Allocations: 226)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 35.1ms | Allocations: 3649)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 79.3ms | ActiveRecord: 2.9ms | Allocations: 17728)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:03:25 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 33.8ms | Allocations: 8896)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 62.3ms | ActiveRecord: 0.0ms | Allocations: 22878)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:04:17 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 30.7ms | Allocations: 8891)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.0ms | Allocations: 22872)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:05:22 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 16.2ms | Allocations: 9219)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.0ms | Allocations: 24720)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:05:33 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 37.5ms | Allocations: 7783)
+  Rendered shared/_navbar.html.erb (Duration: 2.9ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 107.5ms | ActiveRecord: 0.0ms | Allocations: 21766)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:05:50 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 8094)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.0ms | Allocations: 23595)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:06:29 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 30.1ms | Allocations: 9219)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 62.8ms | ActiveRecord: 0.0ms | Allocations: 24721)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:07:56 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 106.0ms | Allocations: 9226)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 1.0ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 132ms (Views: 129.2ms | ActiveRecord: 0.0ms | Allocations: 24733)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:07:57 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 29.7ms | Allocations: 7801)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 68.2ms | ActiveRecord: 0.0ms | Allocations: 21784)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:08:11 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 19.3ms | Allocations: 8072)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 23578)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:08:33 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 9140)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 24641)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:08:42 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 39.6ms | Allocations: 7785)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 87.1ms | ActiveRecord: 0.0ms | Allocations: 21768)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:09:06 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 35.0ms | Allocations: 8903)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 92.4ms | ActiveRecord: 0.0ms | Allocations: 23720)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:09:27 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 37.2ms | Allocations: 8056)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 71.6ms | ActiveRecord: 0.0ms | Allocations: 23502)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:10:07 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 38.3ms | Allocations: 9231)
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 106ms (Views: 103.2ms | ActiveRecord: 0.0ms | Allocations: 24680)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:10:35 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 8100)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms | Allocations: 23546)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:11:02 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 42.2ms | Allocations: 9207)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 104.1ms | ActiveRecord: 0.0ms | Allocations: 24653)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:11:14 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 34.8ms | Allocations: 8110)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 78.0ms | ActiveRecord: 0.0ms | Allocations: 23556)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:11:16 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 38.0ms | Allocations: 7785)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 124.5ms | ActiveRecord: 0.0ms | Allocations: 21717)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:11:36 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 40.9ms | Allocations: 9163)
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 103ms (Views: 98.9ms | ActiveRecord: 0.0ms | Allocations: 24617)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:12:35 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 19.4ms | Allocations: 6812)
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.0ms | Allocations: 22259)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:13:09 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 33.8ms | Allocations: 3591)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 4615)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="pt-30 container">
+  <h1 class="text-center">Nouveau projet</h1>
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= simple_form_for(@roadwork) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+      <div class="form-inputs">
+        <%= f.input :name, label:"Nom du projet" %>
+        <%= f.input :photo, label:"Photo d'illustraiton" as: :file %>
+        <!-- <%#= f.input :banner_url, label:"Photo d'illustration" %> -->
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, value:"Poster votre projet", class: "btn btn-flat" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="pt-30 container">
+2:      <h1 class="text-center">Nouveau projet</h1>
+3:      <div class="row justify-content-center">
+4:        <div class="col-6">
+5:          <%= simple_form_for(@roadwork) do |f| %>
+6:          <%= f.error_notification %>
+7:          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+8:    
+9:          <div class="form-inputs">
+10:            <%= f.input :name, label:"Nom du projet" %>
+11:            <%= f.input :photo, label:"Photo d'illustraiton" as: :file %>
+12:            <!-- <%#= f.input :banner_url, label:"Photo d'illustration" %> -->
+13:          </div>
+14:    
+15:          <div class="form-actions">
+16:            <%= f.button :submit, value:"Poster votre projet", class: "btn btn-flat" %>
+17:          </div>
+18:          <% end %>
+19:        </div>
+20:      </div>
+21:    </div>
+  
+app/views/roadworks/new.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/roadworks/new.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/roadworks/new.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/roadworks/new.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/roadworks/new.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/roadworks/new.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:13:14 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 6679)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.0ms | Allocations: 22133)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:13:23 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 5534)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 20980)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:14:20 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 6688)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 628)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 22134)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:14:36 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uBrafK9qD0rkv26Po3VhPIYlSRx1GNBui2YZRZBL6uUL7etChXXUrj7c+TCxOC0C+jR+RezddzDFzSxoCIAPew==", "roadwork"=>{"name"=>"", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb758665f00 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-17ccf1f.svg>, @original_filename="brands-and-logotypes.svg", @content_type="image/svg+xml", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"brands-and-logotypes.svg\"\r\nContent-Type: image/svg+xml\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 19.3ms | Allocations: 5403)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 62.6ms | ActiveRecord: 3.2ms | Allocations: 23219)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:14:53 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BknNZPRTvkW5QUqo9NMAh+DAxxixg2tmEmP7SNGRMUa1vvxa3kxloWMi3Rfmnky5nNHwQShGzDhcyM5lSVrU2A==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75deae298 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-9fl0te.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 6332)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 39.0ms | ActiveRecord: 2.2ms | Allocations: 23762)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:15:09 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9vZ1qhCQS3pRM+rHpjn+ZZg3xYISJQjj/8+fVWIoq+ALOjogl2ayTMnWBQM1avH6nHoT5GNM33BVAtQzUNHMQ==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7508f09a8 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-eq3uwp.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 5225)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 48.0ms | ActiveRecord: 1.8ms | Allocations: 22659)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:16:32 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9vZ1qhCQS3pRM+rHpjn+ZZg3xYISJQjj/8+fVWIoq+ALOjogl2ayTMnWBQM1avH6nHoT5GNM33BVAtQzUNHMQ==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75dc968c0 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1iauqa3.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1708)
+
+
+  
+SyntaxError (/home/zref/code/nlabrazi/batimentettravaux/app/models/roadwork.rb:7: unmatched close parenthesis: /.*\.(?:png|jpg|jpeg|img|gif))/i):
+  
+app/models/roadwork.rb:7: unmatched close parenthesis: /.*\.(?:png|jpg|jpeg|img|gif))/i
+app/models/roadwork.rb:7: unmatched close parenthesis: /.*\.(?:png|jpg|jpeg|img|gif))/i
+app/models/roadwork.rb:7: unmatched close parenthesis: /.*\.(?:png|jpg|jpeg|img|gif))/i
+app/controllers/roadworks_controller.rb:17:in `create'
+Started POST "/roadworks" for ::1 at 2020-07-23 04:16:40 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9vZ1qhCQS3pRM+rHpjn+ZZg3xYISJQjj/8+fVWIoq+ALOjogl2ayTMnWBQM1avH6nHoT5GNM33BVAtQzUNHMQ==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75dc6c9f8 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-167kwab.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1709)
+
+
+  
+SyntaxError (/home/zref/code/nlabrazi/batimentettravaux/app/models/roadwork.rb:7: target of repeat operator is not specified: /*\.(?:png|jpg|jpeg|img|gif))/i):
+  
+app/models/roadwork.rb:7: target of repeat operator is not specified: /*\.(?:png|jpg|jpeg|img|gif))/i
+app/models/roadwork.rb:7: target of repeat operator is not specified: /*\.(?:png|jpg|jpeg|img|gif))/i
+app/models/roadwork.rb:7: target of repeat operator is not specified: /*\.(?:png|jpg|jpeg|img|gif))/i
+app/controllers/roadworks_controller.rb:17:in `create'
+Started POST "/roadworks" for ::1 at 2020-07-23 04:16:50 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9vZ1qhCQS3pRM+rHpjn+ZZg3xYISJQjj/8+fVWIoq+ALOjogl2ayTMnWBQM1avH6nHoT5GNM33BVAtQzUNHMQ==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75e020860 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1yk8o63.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1709)
+
+
+  
+SyntaxError (/home/zref/code/nlabrazi/batimentettravaux/app/models/roadwork.rb:7: unmatched close parenthesis: /\.(?:png|jpg|jpeg|img|gif))/i):
+  
+app/models/roadwork.rb:7: unmatched close parenthesis: /\.(?:png|jpg|jpeg|img|gif))/i
+app/models/roadwork.rb:7: unmatched close parenthesis: /\.(?:png|jpg|jpeg|img|gif))/i
+app/models/roadwork.rb:7: unmatched close parenthesis: /\.(?:png|jpg|jpeg|img|gif))/i
+app/controllers/roadworks_controller.rb:17:in `create'
+Started POST "/roadworks" for ::1 at 2020-07-23 04:16:57 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9vZ1qhCQS3pRM+rHpjn+ZZg3xYISJQjj/8+fVWIoq+ALOjogl2ayTMnWBQM1avH6nHoT5GNM33BVAtQzUNHMQ==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75ea323a8 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-19aiyor.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1709)
+
+
+  
+SyntaxError (/home/zref/code/nlabrazi/batimentettravaux/app/models/roadwork.rb:7: unmatched close parenthesis: /.(?:png|jpg|jpeg|img|gif))/i):
+  
+app/models/roadwork.rb:7: unmatched close parenthesis: /.(?:png|jpg|jpeg|img|gif))/i
+app/models/roadwork.rb:7: unmatched close parenthesis: /.(?:png|jpg|jpeg|img|gif))/i
+app/models/roadwork.rb:7: unmatched close parenthesis: /.(?:png|jpg|jpeg|img|gif))/i
+app/controllers/roadworks_controller.rb:17:in `create'
+Started POST "/roadworks" for ::1 at 2020-07-23 04:17:02 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9vZ1qhCQS3pRM+rHpjn+ZZg3xYISJQjj/8+fVWIoq+ALOjogl2ayTMnWBQM1avH6nHoT5GNM33BVAtQzUNHMQ==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75eb81088 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1h6p8q2.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1709)
+
+
+  
+SyntaxError (/home/zref/code/nlabrazi/batimentettravaux/app/models/roadwork.rb:7: unmatched close parenthesis: /(?:png|jpg|jpeg|img|gif))/i):
+  
+app/models/roadwork.rb:7: unmatched close parenthesis: /(?:png|jpg|jpeg|img|gif))/i
+app/models/roadwork.rb:7: unmatched close parenthesis: /(?:png|jpg|jpeg|img|gif))/i
+app/models/roadwork.rb:7: unmatched close parenthesis: /(?:png|jpg|jpeg|img|gif))/i
+app/controllers/roadworks_controller.rb:17:in `create'
+Started POST "/roadworks" for ::1 at 2020-07-23 04:17:10 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9vZ1qhCQS3pRM+rHpjn+ZZg3xYISJQjj/8+fVWIoq+ALOjogl2ayTMnWBQM1avH6nHoT5GNM33BVAtQzUNHMQ==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7545ccfe8 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-qe6y88.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 5396)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 18.4ms | ActiveRecord: 4.1ms | Allocations: 28007)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:17:17 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lJ/wDDM8Jx3rgYXjcJJQGddl29CI5oQeweibxc3qFVonaMEyGSP8+THiElxi3xwnq3TsiREjI0CPQ67oVSHwxA==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75850bb50 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1frlfof.svg>, @original_filename="brands-and-logotypes.svg", @content_type="image/svg+xml", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"brands-and-logotypes.svg\"\r\nContent-Type: image/svg+xml\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5225)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 19.9ms | ActiveRecord: 1.1ms | Allocations: 22662)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:17:20 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lJ/wDDM8Jx3rgYXjcJJQGddl29CI5oQeweibxc3qFVonaMEyGSP8+THiElxi3xwnq3TsiREjI0CPQ67oVSHwxA==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75df7d610 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1rgljjx.svg>, @original_filename="brands-and-logotypes.svg", @content_type="image/svg+xml", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"brands-and-logotypes.svg\"\r\nContent-Type: image/svg+xml\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 5225)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 48.0ms | ActiveRecord: 2.4ms | Allocations: 22661)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:17:27 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UaxdD/QpkmYsI9DBQ7Ta+mrB1XbljZmHwHIZsoaKxOHiW2wx3jZJgvZAR35R+ZbEFtDiL3xIPtmO2SyfHkEhfw==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7586bf140 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-f1ar5d.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 5225)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 31.6ms | ActiveRecord: 3.5ms | Allocations: 22661)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:20:23 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UaxdD/QpkmYsI9DBQ7Ta+mrB1XbljZmHwHIZsoaKxOHiW2wx3jZJgvZAR35R+ZbEFtDiL3xIPtmO2SyfHkEhfw==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7508927e0 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1qsnq21.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 5361)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 17.2ms | ActiveRecord: 3.7ms | Allocations: 27830)
+
+
+Started GET "/" for ::1 at 2020-07-23 04:20:27 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (2.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 1.5ms | Allocations: 225)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 3608)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 68.2ms | ActiveRecord: 2.4ms | Allocations: 17635)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:20:29 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 23.2ms | Allocations: 5321)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 83.8ms | ActiveRecord: 0.0ms | Allocations: 19249)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:20:42 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U1y4deQtUsqk8psfuKbU90J0H6qennWhxxmAIxsvyW/gq4lLzjKJLn6RDKCq65jJPmUo8wdb0v+JsrUOg+Qs8Q==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75e0bde08 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-2fthn.svg>, @original_filename="brands-and-logotypes.svg", @content_type="image/svg+xml", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"brands-and-logotypes.svg\"\r\nContent-Type: image/svg+xml\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 25.6ms | Allocations: 5229)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 57.1ms | ActiveRecord: 2.7ms | Allocations: 22681)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:20:48 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KBVajYcGXX/0H6WpEgt5Cq61MCEDqre0e7vT13AcuxKb4muzrRmGmy58MhYARjU00qQHeJpvEOo1EOb66NdejA==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7545fe868 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-12g3nmt.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 5225)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 24.6ms | ActiveRecord: 1.4ms | Allocations: 22657)
+
+
+Started GET "/" for ::1 at 2020-07-23 04:21:54 +0200
+Processing by RoadworksController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1983)
+
+
+  
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  
+app/models/roadwork.rb:7:in `<class:Roadwork>'
+app/models/roadwork.rb:1:in `<main>'
+app/controllers/roadworks_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-07-23 04:21:58 +0200
+Processing by RoadworksController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1763)
+
+
+  
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  
+app/models/roadwork.rb:7:in `<class:Roadwork>'
+app/models/roadwork.rb:1:in `<main>'
+app/controllers/roadworks_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-07-23 04:22:11 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 6165)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 26.0ms | ActiveRecord: 4.3ms | Allocations: 21636)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:22:13 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 23.7ms | Allocations: 5494)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 73.9ms | ActiveRecord: 0.0ms | Allocations: 19420)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:22:22 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TTuOGCQ82nsURDh4RJVCfsuWITDKfr3qgdsdBYIkKGn+zL8mDiMBn84nr8dW2A5At4cWaVO7GrTPcCgoGu/N9w==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7544e4cc0 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1fn810a.svg>, @original_filename="brands-and-logotypes.svg", @content_type="image/svg+xml", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"brands-and-logotypes.svg\"\r\nContent-Type: image/svg+xml\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 5230)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 38.5ms | ActiveRecord: 1.4ms | Allocations: 22783)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:22:28 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wmrKZbA6w2BprLxWuhXtcFhBP9Ci/r6kmIh0vxWd1XZxnftbmiUYhLPPK+moWKFOJFAIiTs7GfrWI0GSjVYw6A==", "roadwork"=>{"name"=>"Test upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb730029f10 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1n1j19p.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 6332)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 44.5ms | ActiveRecord: 2.0ms | Allocations: 23765)
+
+
+Started GET "/" for ::1 at 2020-07-23 04:25:14 +0200
+Processing by RoadworksController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1477)
+
+
+  
+SyntaxError (/home/zref/code/nlabrazi/batimentettravaux/app/models/roadwork.rb:7: unknown regexp option - g):
+  
+app/models/roadwork.rb:7: unknown regexp option - g
+app/models/roadwork.rb:7: unknown regexp option - g
+app/models/roadwork.rb:7: unknown regexp option - g
+app/controllers/roadworks_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-07-23 04:25:26 +0200
+Processing by RoadworksController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1982)
+
+
+  
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  
+app/models/roadwork.rb:7:in `<class:Roadwork>'
+app/models/roadwork.rb:1:in `<main>'
+app/controllers/roadworks_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-07-23 04:25:45 +0200
+Processing by RoadworksController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1978)
+
+
+  
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  
+app/models/roadwork.rb:7:in `<class:Roadwork>'
+app/models/roadwork.rb:1:in `<main>'
+app/controllers/roadworks_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-07-23 04:25:54 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 6149)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 2.4ms | Allocations: 21625)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:25:59 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 21.9ms | Allocations: 5490)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 82.8ms | ActiveRecord: 0.0ms | Allocations: 19416)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:26:14 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"euYkzPusRzj5PB9gcK+GbzB3pmXdyR2BrECUw1illarJERXy0bOc3CNfiN9i4spRTGaRPEQMut/i66HuwG5wNA==", "roadwork"=>{"name"=>"Test Upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75d628560 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1actqr3.svg>, @original_filename="brands-and-logotypes.svg", @content_type="image/svg+xml", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"brands-and-logotypes.svg\"\r\nContent-Type: image/svg+xml\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 5230)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 23.4ms | ActiveRecord: 1.6ms | Allocations: 22793)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:26:21 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WF6Mk/FOsh8BABM8msHafgghTvVfte1ZfMAPF6CzSbfrqb2t21Fp+9tjhIOIjJZAdDB5rMZwSgcyazo6OHisKQ==", "roadwork"=>{"name"=>"Test Upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7544f7cd0 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1rha9bj.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 6332)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 34.7ms | ActiveRecord: 2.3ms | Allocations: 23773)
+
+
+Started GET "/" for ::1 at 2020-07-23 04:26:32 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.4ms | Allocations: 65)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 31.9ms | Allocations: 6119)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 41.7ms | ActiveRecord: 2.6ms | Allocations: 21597)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:26:37 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 22.9ms | Allocations: 5490)
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.0ms | Allocations: 19416)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:26:47 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OPmghQXWQapFZfCSZiSwAdQfzYbCME0fjgXH6uq/xMCLDpG7L8maTp8GZy10afw/qA7631v16kHArvLHcnQhXg==", "roadwork"=>{"name"=>"Test Upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75dc84f58 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1h7mq3k.svg>, @original_filename="brands-and-logotypes.svg", @content_type="image/svg+xml", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"brands-and-logotypes.svg\"\r\nContent-Type: image/svg+xml\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 5230)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 37.7ms | ActiveRecord: 1.5ms | Allocations: 22781)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:26:52 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"maBUXfmW/vlq8eH9ZQ8xpaelfvIlb+WTamaIv0wWPa0qV2Vj04klHbCSdkJ3Qn2b27RJq7yqQs0kzb2S1N3YMw==", "roadwork"=>{"name"=>"Test Upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75ea22b38 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-17on2ay.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 6332)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 25.0ms | ActiveRecord: 0.9ms | Allocations: 23767)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:27:57 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"maBUXfmW/vlq8eH9ZQ8xpaelfvIlb+WTamaIv0wWPa0qV2Vj04klHbCSdkJ3Qn2b27RJq7yqQs0kzb2S1N3YMw==", "roadwork"=>{"name"=>"Test Upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7546a9a10 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1o4wc0z.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2218)
+
+
+  
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  
+app/models/roadwork.rb:7:in `<class:Roadwork>'
+app/models/roadwork.rb:1:in `<main>'
+app/controllers/roadworks_controller.rb:17:in `create'
+Started POST "/roadworks" for ::1 at 2020-07-23 04:28:56 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"maBUXfmW/vlq8eH9ZQ8xpaelfvIlb+WTamaIv0wWPa0qV2Vj04klHbCSdkJ3Qn2b27RJq7yqQs0kzb2S1N3YMw==", "roadwork"=>{"name"=>"Test Upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75dbb3c50 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-ytw32l.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2218)
+
+
+  
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  
+app/models/roadwork.rb:7:in `<class:Roadwork>'
+app/models/roadwork.rb:1:in `<main>'
+app/controllers/roadworks_controller.rb:17:in `create'
+Started POST "/roadworks" for ::1 at 2020-07-23 04:29:08 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"maBUXfmW/vlq8eH9ZQ8xpaelfvIlb+WTamaIv0wWPa0qV2Vj04klHbCSdkJ3Qn2b27RJq7yqQs0kzb2S1N3YMw==", "roadwork"=>{"name"=>"Test Upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb74848daf8 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1p7vh84.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 25.9ms | Allocations: 5385)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 40.6ms | ActiveRecord: 4.1ms | Allocations: 27895)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:29:18 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"avbBnPLb5ASoYwO/XueWhCAhBwlE2HrxwczPtzZRmhfZAfCi2MQ/4HIAlABMqtq6XDAwUN0d3a+PZ/qarpp/iQ==", "roadwork"=>{"name"=>"Test Upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75db6e9e8 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-ktfejr.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 5233)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 27.5ms | ActiveRecord: 2.3ms | Allocations: 22691)
+
+
+Started GET "/" for ::1 at 2020-07-23 04:29:20 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (1.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.7ms | Allocations: 63)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 2829)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 1.2ms | Allocations: 16716)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:29:27 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 5414)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 16.6ms | ActiveRecord: 2.1ms | Allocations: 24232)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 04:29:35 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jnhSLtRfrMJan+qAaAfWAwORJ6AA6NeFRMwso4wZ3sc9j2MQ/kB3JoD8fT96Spo9f4AQ+ZktcNsKZxmOFNI7WQ==", "roadwork"=>{"name"=>"Test Upload", "banner_url"=>#<ActionDispatch::Http::UploadedFile:0x00007fb75476fa30 @tempfile=#<Tempfile:/tmp/RackMultipart20200723-7497-1sxzt7q.jpg>, @original_filename="pp_profil.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"roadwork[banner_url]\"; filename=\"pp_profil.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Upload"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Create (27.7ms)[0m  [1m[32mINSERT INTO "roadworks" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Upload"], ["banner_url", "#<ActionDispatch::Http::UploadedFile:0x00007fb75476fa30>"], ["created_at", "2020-07-23 02:29:35.627027"], ["updated_at", "2020-07-23 02:29:35.627027"]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (22.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+Redirected to http://localhost:3000/roadworks/2
+Completed 302 Found in 64ms (ActiveRecord: 51.3ms | Allocations: 4196)
+
+
+Started GET "/roadworks/2" for ::1 at 2020-07-23 04:29:35 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (6.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 2]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 46.2ms | Allocations: 7381)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 247ms (Views: 58.9ms | ActiveRecord: 22.3ms | Allocations: 29346)
+
+
+Started GET "/roadworks/2" for ::1 at 2020-07-23 04:29:36 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 2]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 6164)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.6ms | Allocations: 20699)
+
+
+Started POST "/roadworks/2/projects" for ::1 at 2020-07-23 04:30:41 +0200
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB+MfrMtxLtdaM3q5emdTzg2zAZKrYOkGbFKgC/mK+Yf6L1AmTIfX4cLWlX3pNFxRCf7X9NoJPpXGn+tty3OeA==", "project"=>{"name"=>"Nabs", "image_url"=>"https://www.fintechnews.org/wp-content/uploads/2019/03/sim-swapping-how-the-mobile-security-feature-can-lead-to-a-hacked-bank-account-1-e1554334522568.jpg"}, "commit"=>"Add", "roadwork_id"=>"2"}
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:3:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = $1 AND "projects"."roadwork_id" = $2 LIMIT $3[0m  [["name", "Nabs"], ["roadwork_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Create (10.0ms)[0m  [1m[32mINSERT INTO "projects" ("roadwork_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["roadwork_id", 2], ["name", "Nabs"], ["image_url", "https://www.fintechnews.org/wp-content/uploads/2019/03/sim-swapping-how-the-mobile-security-feature-can-lead-to-a-hacked-bank-account-1-e1554334522568.jpg"], ["created_at", "2020-07-23 02:30:41.581528"], ["updated_at", "2020-07-23 02:30:41.581528"]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+Redirected to http://localhost:3000/roadworks/2
+Completed 302 Found in 66ms (ActiveRecord: 33.0ms | Allocations: 6232)
+
+
+Started GET "/roadworks/2" for ::1 at 2020-07-23 04:30:41 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 2]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/_project_card.html.erb (Duration: 0.6ms | Allocations: 226)
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 6618)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.6ms | Allocations: 21152)
+
+
+Started GET "/roadworks/2" for ::1 at 2020-07-23 04:30:41 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 2]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/_project_card.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 6318)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 478)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.8ms | Allocations: 20852)
+
+
+Started GET "/" for ::1 at 2020-07-23 04:30:43 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.8ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.8ms | Allocations: 62)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 26.7ms | Allocations: 4748)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 47.8ms | Allocations: 7618)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.8ms | Allocations: 7907)
+
+
+  
+ActionView::Template::Error (The asset "" is not present in the asset pipeline.):
+    1: <%= link_to roadwork_path(roadwork) do %>
+    2:   <div class="card-roadwork">
+    3:     <%= image_tag roadwork.banner_url %>
+    4:     <div class="card-roadwork-infos">
+    5:       <div>
+    6:         <h2><%= roadwork.name %></h2>
+  
+app/views/roadworks/_roadwork_card.html.erb:3
+app/views/roadworks/_roadwork_card.html.erb:1
+app/views/roadworks/index.html.erb:43
+app/views/roadworks/index.html.erb:42
+Started GET "/" for ::1 at 2020-07-23 04:32:28 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (5.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 3.6ms | Allocations: 4749)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 79.6ms | Allocations: 7616)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 5.2ms | Allocations: 7907)
+
+
+  
+ActionView::Template::Error (The asset "" is not present in the asset pipeline.):
+    1: <%= link_to roadwork_path(roadwork) do %>
+    2:   <div class="card-roadwork">
+    3:     <%= image_tag roadwork.banner_url %>
+    4:     <div class="card-roadwork-infos">
+    5:       <div>
+    6:         <h2><%= roadwork.name %></h2>
+  
+app/views/roadworks/_roadwork_card.html.erb:3
+app/views/roadworks/_roadwork_card.html.erb:1
+app/views/roadworks/index.html.erb:43
+app/views/roadworks/index.html.erb:42
+Started GET "/" for ::1 at 2020-07-23 04:32:35 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 2.5ms | Allocations: 4748)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 7615)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 7904)
+
+
+  
+ActionView::Template::Error (The asset "" is not present in the asset pipeline.):
+    1: <%= link_to roadwork_path(roadwork) do %>
+    2:   <div class="card-roadwork">
+    3:     <%= image_tag roadwork.banner_url %>
+    4:     <div class="card-roadwork-infos">
+    5:       <div>
+    6:         <h2><%= roadwork.name %></h2>
+  
+app/views/roadworks/_roadwork_card.html.erb:3
+app/views/roadworks/_roadwork_card.html.erb:1
+app/views/roadworks/index.html.erb:43
+app/views/roadworks/index.html.erb:42
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:32:50 +0200
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:32:51 +0200
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:33:01 +0200
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:33:43 +0200
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:33:44 +0200
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:33:57 +0200
+  [1m[36mRoadwork Destroy (2.5ms)[0m  [1m[31mDELETE FROM "roadworks" WHERE "roadworks"."id" = $1[0m  [["id", 2]]
+  ↳ app/views/roadworks/_roadwork_card.html.erb:3
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:34:01 +0200
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:34:04 +0200
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:34:04 +0200
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:34:25 +0200
+  [1m[36mProject Destroy (26.8ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/roadworks/_roadwork_card.html.erb:3
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:34:26 +0200
+Started PUT "/__web_console/repl_sessions/5ae567086490fc14a538e5afcf7fbbf9" for ::1 at 2020-07-23 04:34:27 +0200
+  [1m[36mRoadwork Destroy (27.1ms)[0m  [1m[31mDELETE FROM "roadworks" WHERE "roadworks"."id" = $1[0m  [["id", 2]]
+  ↳ app/views/roadworks/_roadwork_card.html.erb:3
+Started GET "/" for ::1 at 2020-07-23 04:34:31 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.9ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.9ms | Allocations: 61)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 2817)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.9ms | Allocations: 16692)
+
+
+Started GET "/" for ::1 at 2020-07-23 04:37:02 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.7ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.9ms | Allocations: 219)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 3532)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 430)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.7ms | Allocations: 18942)
+
+
+Started GET "/" for ::1 at 2020-07-23 04:39:16 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.5ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 6149)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 19.1ms | ActiveRecord: 3.8ms | Allocations: 21633)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 04:39:18 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 23.9ms | Allocations: 5819)
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 55.4ms | ActiveRecord: 0.0ms | Allocations: 19881)
+
+
+Started GET "/" for ::1 at 2020-07-23 05:14:55 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.8ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.8ms | Allocations: 219)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3592)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 435)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.8ms | Allocations: 19010)
+
+
+Started GET "/" for ::1 at 2020-07-23 05:14:56 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.5ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.4ms | Allocations: 62)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2822)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.5ms | Allocations: 16707)
+
+
+Started GET "/" for ::1 at 2020-07-23 05:16:10 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.4ms | Allocations: 230)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 53.2ms | Allocations: 41207)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 437)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 68.2ms | ActiveRecord: 3.5ms | Allocations: 59195)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 05:16:14 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 199.5ms | Allocations: 203788)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 221ms (Views: 214.6ms | ActiveRecord: 0.0ms | Allocations: 217888)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 05:19:10 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1oWqK2XFxD+tTYsUAM+Is2Rhd3aLffCR/DWOPkw87JtlcpsVT9of23cuHKsSgsSNGHBALxK4V8+ynrsT1PcJBQ==", "roadwork"=>{"name"=>"Test Email", "banner_url"=>"http://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Email"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Create (0.4ms)[0m  [1m[32mINSERT INTO "roadworks" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Email"], ["banner_url", "http://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"], ["created_at", "2020-07-23 03:19:10.185875"], ["updated_at", "2020-07-23 03:19:10.185875"]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (33.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+Redirected to http://localhost:3000/roadworks/3
+Completed 302 Found in 43ms (ActiveRecord: 34.0ms | Allocations: 4664)
+
+
+Started GET "/roadworks/3" for ::1 at 2020-07-23 05:19:10 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 3]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 7415)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 480)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 18.6ms | ActiveRecord: 3.1ms | Allocations: 29695)
+
+
+Started POST "/roadworks/3/projects" for ::1 at 2020-07-23 05:19:22 +0200
+  
+SyntaxError (/home/zref/code/nlabrazi/batimentettravaux/app/controllers/projects_controller.rb:9: syntax error, unexpected ':', expecting ')'
+...ct_to roadwork_path(@roadwork :notice => 'Projet créé')
+...                              ^
+/home/zref/code/nlabrazi/batimentettravaux/app/controllers/projects_controller.rb:9: syntax error, unexpected ')', expecting end
+...ork :notice => 'Projet créé')
+...                              ^):
+  
+app/controllers/projects_controller.rb:9: syntax error, unexpected ':', expecting ')'
+app/controllers/projects_controller.rb:9: syntax error, unexpected ')', expecting end
+app/controllers/projects_controller.rb:9: syntax error, unexpected ':', expecting ')'
+app/controllers/projects_controller.rb:9: syntax error, unexpected ')', expecting end
+app/controllers/projects_controller.rb:9: syntax error, unexpected ':', expecting ')'
+app/controllers/projects_controller.rb:9: syntax error, unexpected ')', expecting end
+Started GET "/" for ::1 at 2020-07-23 05:20:08 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 6286)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 21.8ms | ActiveRecord: 3.8ms | Allocations: 21720)
+
+
+Started GET "/roadworks/3" for ::1 at 2020-07-23 05:20:17 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRoadwork Load (0.8ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 3]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 6505)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 22.4ms | ActiveRecord: 40.2ms | Allocations: 26887)
+
+
+Started POST "/roadworks/3/projects" for ::1 at 2020-07-23 05:20:22 +0200
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oPNBttbDviKu0ot1qUuVXsDSdOpMOaTIPh1+Xd9XkxcTBHCI/NxlxnSxHMq7BtlgvMNDs9X8A5ZwtktwR5x2iQ==", "project"=>{"name"=>"test", "image_url"=>"http://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"}, "commit"=>"Add", "roadwork_id"=>"3"}
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:3:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = $1 AND "projects"."roadwork_id" = $2 LIMIT $3[0m  [["name", "test"], ["roadwork_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Create (0.7ms)[0m  [1m[32mINSERT INTO "projects" ("roadwork_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["roadwork_id", 3], ["name", "test"], ["image_url", "http://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"], ["created_at", "2020-07-23 03:20:22.852171"], ["updated_at", "2020-07-23 03:20:22.852171"]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[35m (24.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 27.7ms | Allocations: 7112)
+
+
+  
+SyntaxError (/home/zref/code/nlabrazi/batimentettravaux/app/mailers/notification_mailer.rb:12: syntax error, unexpected =>, expecting end
+    :subject => '[TEST] - Merci pour la cré...
+             ^~):
+  
+app/mailers/notification_mailer.rb:12: syntax error, unexpected =>, expecting end
+app/mailers/notification_mailer.rb:12: syntax error, unexpected =>, expecting end
+app/mailers/notification_mailer.rb:12: syntax error, unexpected =>, expecting end
+app/controllers/projects_controller.rb:8:in `create'
+Started GET "/" for ::1 at 2020-07-23 05:21:39 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 22.1ms | Allocations: 6299)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 32.6ms | ActiveRecord: 2.6ms | Allocations: 21742)
+
+
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mProject Destroy (51.6ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 2]]
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  [1m[36mRoadwork Destroy (34.1ms)[0m  [1m[31mDELETE FROM "roadworks" WHERE "roadworks"."id" = $1[0m  [["id", 3]]
+Started GET "/" for ::1 at 2020-07-23 05:23:18 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.9ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 2816)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 281)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.9ms | Allocations: 16718)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 05:23:22 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 22.9ms | Allocations: 5850)
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 69.6ms | ActiveRecord: 0.0ms | Allocations: 19789)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 05:23:35 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eSJIbSIfoFiImszDzq97oggnOrC+/MGdxZMxGsiXXUTK1XlTCAB7vFL5W3zc4jecdDYN6Sc5ZsOLOAQ3UFy42g==", "roadwork"=>{"name"=>"test email", "banner_url"=>"https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "test email"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Create (0.7ms)[0m  [1m[32mINSERT INTO "roadworks" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "test email"], ["banner_url", "https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"], ["created_at", "2020-07-23 03:23:35.938978"], ["updated_at", "2020-07-23 03:23:35.938978"]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (31.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+Redirected to http://localhost:3000/roadworks/4
+Completed 302 Found in 55ms (ActiveRecord: 32.7ms | Allocations: 4123)
+
+
+Started GET "/roadworks/4" for ::1 at 2020-07-23 05:23:36 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRoadwork Load (1.5ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 4]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 6448)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 23.2ms | ActiveRecord: 9.1ms | Allocations: 28461)
+
+
+Started POST "/roadworks/4/projects" for ::1 at 2020-07-23 05:23:48 +0200
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UjGCLnEEsbXEwLTYwa3nFSH610WQguYoZAVLlMRcJcnhxrMQWxtqUR6jI2fT4KsrXevgHAlHQXYqrn65XJfAVw==", "project"=>{"name"=>"test envoi mail", "image_url"=>"https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"}, "commit"=>"Add", "roadwork_id"=>"4"}
+  [1m[36mRoadwork Load (2.5ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:3:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = $1 AND "projects"."roadwork_id" = $2 LIMIT $3[0m  [["name", "test envoi mail"], ["roadwork_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Create (0.8ms)[0m  [1m[32mINSERT INTO "projects" ("roadwork_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["roadwork_id", 4], ["name", "test envoi mail"], ["image_url", "https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"], ["created_at", "2020-07-23 03:23:48.216626"], ["updated_at", "2020-07-23 03:23:48.216626"]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[35m (32.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 36.5ms | Allocations: 6845)
+
+
+  
+SyntaxError (/home/zref/code/nlabrazi/batimentettravaux/app/mailers/notification_mailer.rb:12: syntax error, unexpected tSYMBEG, expecting ')'
+    :subject => '[TEST] - Merci po...
+    ^
+/home/zref/code/nlabrazi/batimentettravaux/app/mailers/notification_mailer.rb:12: syntax error, unexpected ')', expecting end
+...i pour la création de projet')
+...                              ^):
+  
+app/mailers/notification_mailer.rb:12: syntax error, unexpected tSYMBEG, expecting ')'
+app/mailers/notification_mailer.rb:12: syntax error, unexpected ')', expecting end
+app/mailers/notification_mailer.rb:12: syntax error, unexpected tSYMBEG, expecting ')'
+app/mailers/notification_mailer.rb:12: syntax error, unexpected ')', expecting end
+app/mailers/notification_mailer.rb:12: syntax error, unexpected tSYMBEG, expecting ')'
+app/mailers/notification_mailer.rb:12: syntax error, unexpected ')', expecting end
+app/controllers/projects_controller.rb:8:in `create'
+Started GET "/" for ::1 at 2020-07-23 05:25:10 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 6286)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 19.4ms | ActiveRecord: 3.1ms | Allocations: 21726)
+
+
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mRoadwork Destroy (0.8ms)[0m  [1m[31mDELETE FROM "roadworks" WHERE "roadworks"."id" = $1[0m  [["id", 3]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mRoadwork Load (1.5ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  [1m[36mRoadwork Destroy (3.1ms)[0m  [1m[31mDELETE FROM "roadworks" WHERE "roadworks"."id" = $1[0m  [["id", 4]]
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mProject Destroy (27.9ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 3]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mRoadwork Destroy (33.0ms)[0m  [1m[31mDELETE FROM "roadworks" WHERE "roadworks"."id" = $1[0m  [["id", 4]]
+Started GET "/" for ::1 at 2020-07-23 05:27:06 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2816)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 281)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.3ms | Allocations: 16708)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 05:27:11 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 5844)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 19783)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 05:27:17 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P/eqwbNi4RX5K85M3bC7Habc7FZTjl+M60nqMlfvdymMAJv/mX068SNIWfPP/fcj2s3bD8pL+NKl4t8fzySStw==", "roadwork"=>{"name"=>"Test Email", "banner_url"=>"https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Email"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Create (0.4ms)[0m  [1m[32mINSERT INTO "roadworks" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Email"], ["banner_url", "https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"], ["created_at", "2020-07-23 03:27:17.947998"], ["updated_at", "2020-07-23 03:27:17.947998"]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (30.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+Redirected to http://localhost:3000/roadworks/5
+Completed 302 Found in 43ms (ActiveRecord: 31.4ms | Allocations: 4103)
+
+
+Started GET "/roadworks/5" for ::1 at 2020-07-23 05:27:18 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRoadwork Load (1.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 5]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 6461)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 22.2ms | ActiveRecord: 5.3ms | Allocations: 28503)
+
+
+Started POST "/roadworks/5/projects" for ::1 at 2020-07-23 05:27:23 +0200
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g/3MeWiwvL+CtGnQeLAPlS+Ceo0OptVwuhJ4XgOtzWgwCv1HQq9nW1jX/m9q/UOrU5NN1Jdjci70uU1zm2Yo9g==", "project"=>{"name"=>"test envoi mail", "image_url"=>"https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"}, "commit"=>"Add", "roadwork_id"=>"5"}
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:3:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = $1 AND "projects"."roadwork_id" = $2 LIMIT $3[0m  [["name", "test envoi mail"], ["roadwork_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("roadwork_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["roadwork_id", 5], ["name", "test envoi mail"], ["image_url", "https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"], ["created_at", "2020-07-23 03:27:23.490750"], ["updated_at", "2020-07-23 03:27:23.490750"]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[35m (32.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+NotificationMailer#create_project: processed outbound mail in 2.5ms
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 34.0ms | Allocations: 34011)
+
+
+  
+NameError (undefined local variable or method `user' for #<NotificationMailer:0x00007f2d9c123448>
+Did you mean?  super):
+  
+app/mailers/notification_mailer.rb:9:in `create_project'
+app/controllers/projects_controller.rb:8:in `create'
+Started GET "/" for ::1 at 2020-07-23 05:27:40 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 6286)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 2.6ms | Allocations: 21732)
+
+
+Started GET "/" for ::1 at 2020-07-23 05:27:42 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2953)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.3ms | Allocations: 16841)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 05:27:43 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 24.1ms | Allocations: 5848)
+  Rendered shared/_navbar.html.erb (Duration: 3.4ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 86.6ms | ActiveRecord: 0.0ms | Allocations: 19787)
+
+
+Started GET "/" for ::1 at 2020-07-23 05:27:45 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (4.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 2953)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 4.3ms | Allocations: 16851)
+
+
+Started GET "/roadworks/5" for ::1 at 2020-07-23 05:27:47 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRoadwork Load (0.7ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 5]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/_project_card.html.erb (Duration: 0.6ms | Allocations: 233)
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 8091)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 20.1ms | ActiveRecord: 5.2ms | Allocations: 28453)
+
+
+Started DELETE "/projects/4" for ::1 at 2020-07-23 05:27:50 +0200
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8HIIiw4ur6f685Q1D1kdgPzJyouZ0VxB2NNpdEN3YH1DhTm1JDF0QyCQA4odFFG+gNj90gAU+x+WeFxZ27yF4w==", "id"=>"4"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16:in `destroy'
+  [1m[36mRoadwork Load (0.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:17:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:18:in `destroy'
+  [1m[36mProject Destroy (0.3ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/projects_controller.rb:18:in `destroy'
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:18:in `destroy'
+Redirected to http://localhost:3000/roadworks/5
+Completed 302 Found in 32ms (ActiveRecord: 25.6ms | Allocations: 3902)
+
+
+Started GET "/roadworks/5" for ::1 at 2020-07-23 05:27:50 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRoadwork Load (0.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 5]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 6158)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.5ms | Allocations: 20706)
+
+
+Started POST "/roadworks/5/projects" for ::1 at 2020-07-23 05:27:57 +0200
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N14La/QwPvQ+tCpsK6x34yOY10eMbn5LFAONnHLzqLSEqTpV3i/lEOTXvdM54TvdX4ngHhWr2RVaqLix6jhNKg==", "project"=>{"name"=>"test envoi mail", "image_url"=>"https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"}, "commit"=>"Add", "roadwork_id"=>"5"}
+  [1m[36mRoadwork Load (0.5ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:3:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = $1 AND "projects"."roadwork_id" = $2 LIMIT $3[0m  [["name", "test envoi mail"], ["roadwork_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Create (0.8ms)[0m  [1m[32mINSERT INTO "projects" ("roadwork_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["roadwork_id", 5], ["name", "test envoi mail"], ["image_url", "https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"], ["created_at", "2020-07-23 03:27:57.241398"], ["updated_at", "2020-07-23 03:27:57.241398"]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[35m (24.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+NotificationMailer#create_project: processed outbound mail in 5.2ms
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 26.7ms | Allocations: 14857)
+
+
+  
+NameError (undefined local variable or method `user' for #<NotificationMailer:0x00007f2d9c8630f0>
+Did you mean?  super):
+  
+app/mailers/notification_mailer.rb:10:in `create_project'
+app/controllers/projects_controller.rb:8:in `create'
+Started GET "/" for ::1 at 2020-07-23 05:28:20 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.3ms | Allocations: 65)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 6286)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 23.1ms | ActiveRecord: 3.2ms | Allocations: 21724)
+
+
+Started GET "/roadworks/5" for ::1 at 2020-07-23 05:28:22 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRoadwork Load (1.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 5]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/_project_card.html.erb (Duration: 0.4ms | Allocations: 84)
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 14.4ms | Allocations: 7864)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 478)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 30.8ms | ActiveRecord: 8.1ms | Allocations: 29871)
+
+
+Started DELETE "/projects/5" for ::1 at 2020-07-23 05:28:24 +0200
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7bXsu9xtizPNQLL7YIu4lSoa4r43N7JgREOpU7mmnlpeQt2F9nJQ1xcjJURyxvSrVgvV567yFT4K6Jx+IW17xA==", "id"=>"5"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16:in `destroy'
+  [1m[36mRoadwork Load (0.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:17:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:18:in `destroy'
+  [1m[36mProject Destroy (0.3ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/projects_controller.rb:18:in `destroy'
+  [1m[35m (33.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:18:in `destroy'
+Redirected to http://localhost:3000/roadworks/5
+Completed 302 Found in 42ms (ActiveRecord: 34.8ms | Allocations: 3880)
+
+
+Started GET "/roadworks/5" for ::1 at 2020-07-23 05:28:24 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRoadwork Load (0.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 5]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 6168)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.5ms | Allocations: 20715)
+
+
+Started GET "/roadworks/5" for ::1 at 2020-07-23 05:28:26 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRoadwork Load (0.2ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 5]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 6181)
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 1.5ms | Allocations: 20730)
+
+
+Started GET "/" for ::1 at 2020-07-23 05:28:27 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (1.0ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.5ms | Allocations: 61)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 18.3ms | Allocations: 3014)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 1.0ms | Allocations: 16906)
+
+
+Started GET "/roadworks/5" for ::1 at 2020-07-23 05:28:29 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRoadwork Load (1.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 5]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 28.4ms | Allocations: 6167)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 56.8ms | ActiveRecord: 3.2ms | Allocations: 20747)
+
+
+  [1m[36mRoadwork Load (1.0ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  [1m[36mRoadwork Destroy (29.5ms)[0m  [1m[31mDELETE FROM "roadworks" WHERE "roadworks"."id" = $1[0m  [["id", 5]]
+Started GET "/" for ::1 at 2020-07-23 05:28:45 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.9ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 2816)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 281)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 0.9ms | Allocations: 16710)
+
+
+Started GET "/roadworks/new" for ::1 at 2020-07-23 05:28:48 +0200
+Processing by RoadworksController#new as HTML
+  Rendering roadworks/new.html.erb within layouts/application
+  Rendered roadworks/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 5511)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.0ms | Allocations: 19450)
+
+
+Started POST "/roadworks" for ::1 at 2020-07-23 05:28:54 +0200
+Processing by RoadworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"25SutQaSBB8YTz+piZhV27RDFWTBCVxeOHO40sQaYKVoY5+LLI3f+8IsqBab1RnlyFIiPVjM+wB22I3/XNGFOw==", "roadwork"=>{"name"=>"Test Email", "banner_url"=>"https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"}, "commit"=>"Poster votre projet"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "roadworks" WHERE "roadworks"."name" = $1 LIMIT $2[0m  [["name", "Test Email"], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[36mRoadwork Create (4.4ms)[0m  [1m[32mINSERT INTO "roadworks" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Email"], ["banner_url", "https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"], ["created_at", "2020-07-23 03:28:54.477308"], ["updated_at", "2020-07-23 03:28:54.477308"]]
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+  [1m[35m (28.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/roadworks_controller.rb:18:in `create'
+Redirected to http://localhost:3000/roadworks/6
+Completed 302 Found in 67ms (ActiveRecord: 35.5ms | Allocations: 4116)
+
+
+Started GET "/roadworks/6" for ::1 at 2020-07-23 05:28:54 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoadwork Load (1.0ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 6]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 25.7ms | Allocations: 6422)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 46.5ms | ActiveRecord: 1.9ms | Allocations: 20969)
+
+
+Started GET "/roadworks/6" for ::1 at 2020-07-23 05:28:57 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoadwork Load (1.1ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 6]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 36.3ms | Allocations: 6166)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 50.9ms | ActiveRecord: 1.9ms | Allocations: 20718)
+
+
+Started GET "/" for ::1 at 2020-07-23 05:28:58 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (1.0ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.9ms | Allocations: 61)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.7ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 2953)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 281)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 1.0ms | Allocations: 16843)
+
+
+Started GET "/" for ::1 at 2020-07-23 05:29:00 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2953)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 281)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.3ms | Allocations: 16847)
+
+
+Started GET "/roadworks/6" for ::1 at 2020-07-23 05:29:02 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoadwork Load (1.5ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 6]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 33.3ms | Allocations: 6168)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 64.6ms | ActiveRecord: 2.6ms | Allocations: 20715)
+
+
+Started POST "/roadworks/6/projects" for ::1 at 2020-07-23 05:29:10 +0200
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m4LD7c1qzMzK9sMOk6vssuxHOlvewr1kZy7Y7as7V1QodfLT53UXKBCVVLGB5qCMkFYNAkcHGjophe3AM/Cyyg==", "project"=>{"name"=>"test envoi mail", "image_url"=>"https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"}, "commit"=>"Add", "roadwork_id"=>"6"}
+  [1m[36mRoadwork Load (0.4ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:3:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = $1 AND "projects"."roadwork_id" = $2 LIMIT $3[0m  [["name", "test envoi mail"], ["roadwork_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Create (0.6ms)[0m  [1m[32mINSERT INTO "projects" ("roadwork_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["roadwork_id", 6], ["name", "test envoi mail"], ["image_url", "https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"], ["created_at", "2020-07-23 03:29:10.829819"], ["updated_at", "2020-07-23 03:29:10.829819"]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[35m (29.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  Rendering notification_mailer/create_project.html.erb within layouts/mailer
+  Rendered notification_mailer/create_project.html.erb within layouts/mailer (Duration: 0.3ms | Allocations: 109)
+  Rendering notification_mailer/create_project.text.erb within layouts/mailer
+  Rendered notification_mailer/create_project.text.erb within layouts/mailer (Duration: 0.3ms | Allocations: 102)
+NotificationMailer#create_project: processed outbound mail in 23.3ms
+Delivered mail 5f190406dbf11_38e52b14be03ba4448652@kaox.mail (311.0ms)
+Date: Thu, 23 Jul 2020 05:29:10 +0200
+From: from@example.com
+To: zref78@gmail.com
+Message-ID: <5f190406dbf11_38e52b14be03ba4448652@kaox.mail>
+Subject: =?UTF-8?Q?[TEST]_-_Merci_pour_la_cr=C3=A9ation_de_projet?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5f190406dafd4_38e52b14be03ba4448593";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5f190406dafd4_38e52b14be03ba4448593
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Notification#create_project=0D
+=0D
+Bonjour XXXX_USER, nous avons bien re=C3=A7u votre cr=C3=A9ation de proje=
+t nous vous recontactons rapidement, find me in app/views/notification_ma=
+iler/create_project.text.erb=0D
+=0D
+
+----==_mimepart_5f190406dafd4_38e52b14be03ba4448593
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <h1>Notification#create_project</h1>=0D
+=0D
+<p>=0D
+  Bonjour XXXX_USER, nous avons bien re=C3=A7u votre cr=C3=A9ation de pro=
+jet nous vous recontactons rapidement, find me in app/views/notification_=
+mailer/create_project.html.erb=0D
+</p>=0D
+=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5f190406dafd4_38e52b14be03ba4448593--
+
+Completed 500 Internal Server Error in 393ms (ActiveRecord: 34.0ms | Allocations: 26949)
+
+
+  
+Net::SMTPAuthenticationError (530-5.7.0 Authentication Required. Learn more at
+):
+  
+app/controllers/projects_controller.rb:8:in `create'
+Started GET "/" for ::1 at 2020-07-23 05:48:41 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (0.8ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.4ms | Allocations: 62)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 3020)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 0.8ms | Allocations: 16916)
+
+
+Started GET "/roadworks/6" for ::1 at 2020-07-23 05:48:44 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoadwork Load (0.9ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 6]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/_project_card.html.erb (Duration: 0.9ms | Allocations: 81)
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 31.4ms | Allocations: 6604)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 478)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 65.1ms | ActiveRecord: 3.6ms | Allocations: 21183)
+
+
+Started POST "/roadworks/6/projects" for ::1 at 2020-07-23 05:49:00 +0200
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S11OGdXmDb3TBqiVV2NpBUEmEFebTfxgFJTog14Amtf4qn8n//nWWQllPypFLiU7PTcnDgKIWz5aP92uxst/SQ==", "project"=>{"name"=>"test envoi email2", "image_url"=>"https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"}, "commit"=>"Add", "roadwork_id"=>"6"}
+  [1m[36mRoadwork Load (0.6ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:3:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = $1 AND "projects"."roadwork_id" = $2 LIMIT $3[0m  [["name", "test envoi email2"], ["roadwork_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Create (1.1ms)[0m  [1m[32mINSERT INTO "projects" ("roadwork_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["roadwork_id", 6], ["name", "test envoi email2"], ["image_url", "https://cnaf.notaires.fr/wp-content/uploads/2016/02/architecture-construction-build-building-162557_mini.jpeg"], ["created_at", "2020-07-23 03:49:00.640168"], ["updated_at", "2020-07-23 03:49:00.640168"]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[35m (56.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  Rendering notification_mailer/create_project.html.erb within layouts/mailer
+  Rendered notification_mailer/create_project.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 5)
+  Rendering notification_mailer/create_project.text.erb within layouts/mailer
+  Rendered notification_mailer/create_project.text.erb within layouts/mailer (Duration: 0.1ms | Allocations: 4)
+NotificationMailer#create_project: processed outbound mail in 12.7ms
+Delivered mail 5f1908acaf23a_38e52b14be02aadc48863@kaox.mail (266.0ms)
+Date: Thu, 23 Jul 2020 05:49:00 +0200
+From: from@example.com
+To: zref78@gmail.com
+Message-ID: <5f1908acaf23a_38e52b14be02aadc48863@kaox.mail>
+Subject: =?UTF-8?Q?[TEST]_-_Merci_pour_la_cr=C3=A9ation_de_projet?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5f1908acad3db_38e52b14be02aadc487c3";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5f1908acad3db_38e52b14be02aadc487c3
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Notification#create_project=0D
+=0D
+Bonjour XXXX_USER, nous avons bien re=C3=A7u votre cr=C3=A9ation de proje=
+t nous vous recontactons rapidement, find me in app/views/notification_ma=
+iler/create_project.text.erb=0D
+=0D
+
+----==_mimepart_5f1908acad3db_38e52b14be02aadc487c3
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <h1>Notification#create_project</h1>=0D
+=0D
+<p>=0D
+  Bonjour XXXX_USER, nous avons bien re=C3=A7u votre cr=C3=A9ation de pro=
+jet nous vous recontactons rapidement, find me in app/views/notification_=
+mailer/create_project.html.erb=0D
+</p>=0D
+=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5f1908acad3db_38e52b14be02aadc487c3--
+
+Completed 500 Internal Server Error in 351ms (ActiveRecord: 58.9ms | Allocations: 16031)
+
+
+  
+Net::SMTPAuthenticationError (530-5.7.0 Authentication Required. Learn more at
+):
+  
+app/controllers/projects_controller.rb:8:in `create'
