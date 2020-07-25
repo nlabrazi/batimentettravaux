@@ -21,6 +21,7 @@ gem "rack", ">= 2.0.8"
 
 # custom added
 gem 'cloudinary'
+gem 'figaro'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
