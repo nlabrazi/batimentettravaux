@@ -5,10 +5,9 @@ class NotificationMailer < ApplicationMailer
   #
   #   en.notification_mailer.create_project.subject
   #
-  def create_project
-    #@user = user
+  def create_project(project)
+    @project = project
     @greeting = "Bonjour XXXX_USER, nous avons bien reçu votre création de projet nous vous recontactons rapidement"
-    mail( to: "zref78@gmail.com",
-    :subject => '[TEST] - Merci pour la création de projet')
+    mail( to: "zref78@gmail.com", :subject => '[TEST] - Multi-Emails ??? création de projet')
   end
 end

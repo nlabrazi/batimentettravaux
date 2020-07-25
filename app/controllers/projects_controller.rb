@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
     @project.roadwork = @roadwork
     if @project.save
       # Deliver the signup email
-      NotificationMailer.create_project.deliver
+      NotificationMailer.create_project(@project).deliver
       redirect_to roadwork_path(@roadwork, :notice => 'Projet créé')
     else
       render 'roadworks/show'
