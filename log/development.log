@@ -6842,3 +6842,151 @@ Processing by RoadworksController#show as HTML
 Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 1.4ms | Allocations: 21210)
 
 
+Started GET "/roadworks/7?notice=Projet+cr%C3%A9%C3%A9" for ::1 at 2020-07-25 04:37:31 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoadworksController#show as HTML
+  Parameters: {"notice"=>"Projet créé", "id"=>"7"}
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 7]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/_project_card.html.erb (Duration: 0.6ms | Allocations: 253)
+  Rendered roadworks/_project_card.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered roadworks/_project_card.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 163.6ms | Allocations: 207487)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 653)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 249ms (Views: 225.2ms | ActiveRecord: 5.8ms | Allocations: 271102)
+
+
+Started POST "/roadworks/7/projects" for ::1 at 2020-07-25 04:37:37 +0200
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bZc04X40zPdj1qMmL17VAs6wu/a1t13h3amv2r0Gh3/pqWtRNceIjaxQJaqzIzwJ4+L5UCiYYTxnp0p2nTgPUA==", "project"=>{"name"=>"blabla", "image_url"=>"https://constructionbydaniels.com/wp-content/uploads/Comparing-Onsite-vs-Offsite-Commercial-Construction-Methods.jpg"}, "commit"=>"Add", "roadwork_id"=>"7"}
+  [1m[36mRoadwork Load (0.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:3:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = $1 AND "projects"."roadwork_id" = $2 LIMIT $3[0m  [["name", "blabla"], ["roadwork_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[36mProject Create (1.0ms)[0m  [1m[32mINSERT INTO "projects" ("roadwork_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["roadwork_id", 7], ["name", "blabla"], ["image_url", "https://constructionbydaniels.com/wp-content/uploads/Comparing-Onsite-vs-Offsite-Commercial-Construction-Methods.jpg"], ["created_at", "2020-07-25 02:37:37.704597"], ["updated_at", "2020-07-25 02:37:37.704597"]]
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  [1m[35m (15.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:6:in `create'
+  Rendering notification_mailer/create_project.html.erb within layouts/mailer
+  Rendered notification_mailer/create_project.html.erb within layouts/mailer (Duration: 0.4ms | Allocations: 117)
+  Rendering notification_mailer/create_project.text.erb within layouts/mailer
+  Rendered notification_mailer/create_project.text.erb within layouts/mailer (Duration: 0.3ms | Allocations: 102)
+NotificationMailer#create_project: processed outbound mail in 7.2ms
+Delivered mail 5f1b9af1bb73c_3b682ad57b58449c6c9@kaox.mail (1380.4ms)
+Date: Sat, 25 Jul 2020 04:37:37 +0200
+From: batimentettravaux@gmail.com
+To: zref78@gmail.com
+Message-ID: <5f1b9af1bb73c_3b682ad57b58449c6c9@kaox.mail>
+Subject: =?UTF-8?Q?[TEST]_-_Multi-Emails_=3F=3F=3F_cr=C3=A9ation_de_projet?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5f1b9af1ba4ad_3b682ad57b58449c51a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5f1b9af1ba4ad_3b682ad57b58449c51a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Notification#create_project=0D
+=0D
+Bonjour XXXX_USER, nous avons bien re=C3=A7u votre cr=C3=A9ation de proje=
+t nous vous recontactons rapidement, find me in app/views/notification_ma=
+iler/create_project.text.erb=0D
+=0D
+
+----==_mimepart_5f1b9af1ba4ad_3b682ad57b58449c51a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <h1>Nouvelle demande de projet re=C3=A7u</h1>=0D
+=0D
+<p>=0D
+  Bonjour XXXX_USER, nous avons bien re=C3=A7u votre cr=C3=A9ation de pro=
+jet nous vous recontactons rapidement, et si t'es pas content c'est parei=
+l !=0D
+  =F0=9F=99=88=F0=9F=99=88=F0=9F=99=88=F0=9F=99=88=0D
+</p>=0D
+=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5f1b9af1ba4ad_3b682ad57b58449c51a--
+
+Redirected to http://localhost:3000/roadworks/7?notice=Projet+cr%C3%A9%C3%A9
+Completed 302 Found in 1455ms (ActiveRecord: 17.1ms | Allocations: 35485)
+
+
+Started GET "/roadworks/7?notice=Projet+cr%C3%A9%C3%A9" for ::1 at 2020-07-25 04:37:39 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"notice"=>"Projet créé", "id"=>"7"}
+  [1m[36mRoadwork Load (0.9ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 7]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/_project_card.html.erb (Duration: 1.6ms | Allocations: 85)
+  Rendered roadworks/_project_card.html.erb (Duration: 0.9ms | Allocations: 69)
+  Rendered roadworks/_project_card.html.erb (Duration: 0.9ms | Allocations: 69)
+  Rendered roadworks/_project_card.html.erb (Duration: 0.6ms | Allocations: 69)
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 37.5ms | Allocations: 6812)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 479)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 66.5ms | ActiveRecord: 1.9ms | Allocations: 21362)
+
+
+Started GET "/roadworks/7?notice=Projet+cr%C3%A9%C3%A9" for ::1 at 2020-07-25 04:57:57 +0200
+Processing by RoadworksController#show as HTML
+  Parameters: {"notice"=>"Projet créé", "id"=>"7"}
+  [1m[36mRoadwork Load (0.5ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks" WHERE "roadworks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/roadworks_controller.rb:7:in `show'
+  Rendering roadworks/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."roadwork_id" = $1[0m  [["roadwork_id", 7]]
+  ↳ app/views/roadworks/show.html.erb:9
+  Rendered roadworks/_project_card.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered roadworks/_project_card.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered roadworks/_project_card.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered roadworks/_project_card.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered roadworks/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 7071)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 478)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 1.0ms | Allocations: 21721)
+
+
+Started GET "/" for ::1 at 2020-07-25 04:58:00 +0200
+Processing by RoadworksController#index as HTML
+  Rendering roadworks/index.html.erb within layouts/application
+  [1m[36mRoadwork Load (1.3ms)[0m  [1m[34mSELECT "roadworks".* FROM "roadworks"[0m
+  ↳ app/views/roadworks/index.html.erb:42
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 1.7ms | Allocations: 224)
+  Rendered roadworks/_roadwork_card.html.erb (Duration: 0.7ms | Allocations: 59)
+  Rendered roadworks/index.html.erb within layouts/application (Duration: 34.6ms | Allocations: 3758)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 282)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 60.5ms | ActiveRecord: 1.3ms | Allocations: 17810)
+
+
