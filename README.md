@@ -6,3 +6,4 @@
 gem cloudinary
 gem activestorage
 gem figaro
+gem simple_form
